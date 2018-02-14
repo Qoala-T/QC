@@ -9,7 +9,7 @@ Qoala-T is a supervised learning tool that asseses accuracy of manual control of
 This reproducibility package contains data and R code for the steps 2B and 4 as part of our Qoala-T tool descirbed in Klapwijk et al ., (in prep).  
 
 ### Running Qoala-T
-To be able to run Qoala-T, your T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). Next run [stats2table_bash_qoala_t.sh]<https://github.com/larawierenga/Qoala-T-under-construction/blob/master/stats2table_bash_qoala_t.sh> to create an input file for the Qoala-T tool. 
+To be able to run Qoala-T, your T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). Next run [stats2table_bash_qoala_t.sh](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/stats2table_bash_qoala_t.sh) to create an input file for the Qoala-T tool. 
 
 ### Predicting scan Qoala-T score by rating 10% of your data
 
