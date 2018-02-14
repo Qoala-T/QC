@@ -6,7 +6,7 @@ Qoala-T is developed in the [Brain and development research center](https://www.
 About
 -----
 This reproducibility package contains data and R code for the steps 2B and 4 as part of our Qoala-T tool descirbed in Klapwijk et al ., (in prep). 
-
+-----
 ###Running Qoala-T
 
 ###Predicting scan Qoala-T score by rating 10% of your data
