@@ -35,13 +35,13 @@ Citation
 --------
 **When using Qoala-T, please include the following citation:**
 
-Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (in prep) *Qoala-T: A supervised-learning tool to assess accuracy of manual quality control of automated neuroanatomical labeling in developmental MRI data.*
+Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (in prep). *Qoala-T: A supervised-learning tool to assess accuracy of manual quality control of automated neuroanatomical labeling in developmental MRI data.*
 
 
 Authors
 -------
 Eduard T. Klapwijk, Ferdi van de Kamp, Mara van der Meulen, Sabine Peters, and Lara M. Wierenga
-
+-------
 <br />
 <br />
 Copyright (C) 2017 Lara Wierenga - Leiden University, Brain and Development Research Center
