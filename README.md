@@ -14,12 +14,10 @@ If you have any question or suggestion, dont hesitate to get in touch:
 
 Citation
 --------
-
-.. topic:: **When using Qoala-T, please include the following citation:**
+**When using Qoala-T, please include the following citation:**
 
     Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M.;
     *Qoala-T: A supervised-learning tool to assess accuracy of manual quality control of automated neuroanatomical labeling in developmental MRI data*;
-    (in prep)_.
 
 
 Authors
