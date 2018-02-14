@@ -44,8 +44,8 @@ Eduard T. Klapwijk, Ferdi van de Kamp, Mara van der Meulen, Sabine Peters, and L
 
 <br />
 <br />
-Copyright (C) 2017 Lara Wierenga - Leiden University, Brain and Development Research Center
-Akk rights reserved.
+Copyright (C) 2017 Lara Wierenga - Leiden University, Brain and Development Research Center<br />
+All rights reserved.
 
 ----
 
