@@ -1,8 +1,49 @@
 ## Qoala-T (Under construction)
-### *A supervised-learning tool to assess accuracy of manual quality control of automated neuroanatomical labeling in developmental MRI data*
+### *A supervised-learning tool to assess accuracy of manual quality control of of automatic segmented MRI data*
 
 Version (1)   14 feb 2018 <br />
 Qoala-T is developed in the [Brain and development research center](https://www.brainanddevelopmentlab.nl) by [Lara Wierenga](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/273-lara-wierenga) and [Eduard Klapwijk](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/287-eduard-klapwijk)
+
+##############################################################################
+#      =++++++                                                 =++++++           
+#    +++++++++++++,                                        +++++++++++++         
+#   +++++++++++++++++~                                  +++++++++++++++++        
+#  +++++++++++++++++++++                             ~++++++++++++++++++++       
+#  ++++,+++++++++++++++++                           ++++++++++++++++++=++++      
+# +++~  ++++++++++++++++++      =+++++++++++=,      +++++++++++++++++   +++      
+# +++  +++++++++++++++++++   +++++++++++++++++++,   ++++++++++++++++++   ++=     
+#:++  +++++++++++++++++++  +++++++++++++++++++++++  +++++++++++++++++++  +++     
+#~+, ~+++++++++++++++++++ +++++++++++++++++++++++++  +++++++++++++++++++  ++     
+#~+  ++++++++++++++++++= +++++++++++++++++++++++++++  +++++++++++++++++++ ,+     
+#   +++++++DMMMMMMMMMMMMMMMMMMZ++++++++++++++++DMMMMMMMMMMMMMMMMMZ+++++++: +     
+#  ++++++++MDNDMMM,   +++++++++MMMMN?++++MMMMM,++++++++  MMMNNDM++++++++       
+# +++++++++$MDDM     ++++++++++++MMMMMMMMMMM++++++++++++    MDDMM+++++++++      
+#  ++++++++++MM     ++++++++++++++MMMMDMMMM++++++++++++++     MMI+++++++++       
+#   +++++++++MM     ++++++++++++++MMM+++8MM ++++++++++++++    MM+++++++++:       
+#    ++++++++=M    ++++++++++~MM  MM+++++MM    OIMN+++++++     M+++++++++~        
+#     =+++++++M    ++++++++ MDMMM MM+   =IMM  ?M8MM+++++++    M++++++++          
+#             MM   +++++++++:MMM:MM+      MM   MMMM ++++++   MM                  
+#              MZ   ++++++++++  MM++      +MM++++++++++++   ,MZ                  
+#              7MM   ++++++++ MM+++      ++OM:++++++++++  NMM                   
+#                MMMN +++++IMMM+++++      ++++DMM7++++++NMMM                     
+#                   MMMMMMM$++++++++      +++++++7MMMMMMM                        
+#                       ++++++++++++      ++++++++++++                           
+#                        ++++++++++++~,:++++++++++++:                            
+#                         +++++++++++++++++++++++++                              
+#                          :+++++++++++++++++++++~                               
+#                             ++++++++++++++++=                                  
+#                                                                                
+#	    ______                       __                 ________ 
+#	   /      \                     |  \               |        \
+#	  |  $$$$$$\  ______    ______  | $$  ______        \$$$$$$$$
+#	  | $$  | $$ /      \  |      \ | $$ |      \  ______ | $$   
+#	  | $$  | $$|  $$$$$$\  \$$$$$$\| $$  \$$$$$$\|      \| $$   
+#	  | $$ _| $$| $$  | $$ /      $$| $$ /      $$ \$$$$$$| $$   
+#	  | $$/ \ $$| $$__/ $$|  $$$$$$$| $$|  $$$$$$$        | $$   
+#	   \$$ $$ $$ \$$    $$ \$$    $$| $$ \$$    $$        | $$   
+#	    \$$$$$$\  \$$$$$$   \$$$$$$$ \$$  \$$$$$$$         \$$   
+#	        \$$$                                                 
+##############################################################################
 
 About
 -----
