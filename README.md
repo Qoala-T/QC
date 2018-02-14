@@ -7,11 +7,11 @@ About
 -----
 This reproducibility package contains data and R code for the steps 2B and 4 as part of our Qoala-T tool descirbed in Klapwijk et al ., (in prep). 
 
-#Running Qoala-T
+###Running Qoala-T
 
-#Predicting scan Qoala-T score by rating 10% of your data
+###Predicting scan Qoala-T score by rating 10% of your data
 
-#Predicting scan Qoala-T score by using Braintime model
+###Predicting scan Qoala-T score by using Braintime model
 
 
 Support and communication
