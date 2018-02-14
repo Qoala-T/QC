@@ -27,8 +27,8 @@ A flowchart of this process can be observed in step 4.
 
 Support and communication
 -------------------------
-If you have any question or suggestion, dont hesitate to get in touch:
-<l.m.wierenga@fsw.leidenuniv.nl>
+If you have any question or suggestion dont hesitate to get in touch:
+<l.m.wierenga@fsw.leidenuniv.nl> or <e.t.klapwijk@fsw.leidenuniv.nl>
 
 
 Citation
