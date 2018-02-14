@@ -16,7 +16,7 @@ This reproducibility package contains data and R code for the steps 2B and 4 as 
 Run [Qoala_T_step2_10perc_github.R](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_step2_10perc_github.R).
 In this step an inhouse manual QC protocol can be applied on a subset of the dataset (e.g. 10%, N>100 is recommended for reliable results).  
 A flowchart of this process can be observed in step 2B. 
-![Flowchart step 2B](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figure1_flowchart_step2.pdf?raw=true "Title")
+![Flowchart step 2B](master/Figure1_flowchart_step2.pdf)
 
 
 ### Predicting scan Qoala-T score by using Braintime model
