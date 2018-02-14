@@ -8,9 +8,11 @@ This reproducibility package contains data and R code for the steps 2B and 4 as 
   
 Title: Qoala-T: A supervised-learning tool to assess accuracy of manual quality control of automated neuroanatomical labeling in developmental MRI data (in prep)
 
-By:*Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M.*
+By: *Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M.*
 
 If you have any question or suggestion, dont hesitate to get in touch:
 <l.m.wierenga@fsw.leidenuniv.nl>
 
 -----
+
+
