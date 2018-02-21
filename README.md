@@ -3,6 +3,7 @@
 </p> 
 
 # Qoala-T (Under construction)
+  
 ### *A supervised-learning tool to assess accuracy of manual quality control of automatic segmented MRI data*
 
 Version (1)   21 feb 2018 <br />
