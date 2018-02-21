@@ -18,13 +18,13 @@ This package contains data and R code for the steps 2 and 4 as described in Klap
 - Open [Qoala_T_step2_10perc_github.R](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_step2_10perc_github.R) and follow the instructions.
 - With this R script an inhouse developped manual QC protocol can be applied on a subset of the dataset (e.g. 10%, N>100 is recommended for reliable results).  <br /> <br />
 A flowchart of this process can be observed in steps 2B and 2C. 
-![Step 2](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Documents/Figure1_flowchart_step2_github.jpeg "Step 2B")
+![Step 2](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Figure1_flowchart_step2_github.jpeg "Step 2B")
 
 ### Predicting scan Qoala-T score by using Braintime model
 - Open [Qoala_T_step4_validation_novel_data_github.R](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_step4_validation_novel_data_github.R) and follow the instructions.
 - With this R script Qoala-T scores for a dataset are estimated using a supervised learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assesement is descibed in the supplemental meterial of Klapwijk et al ., (in prep). <br /> <br />
 A flowchart of this process can be observed in step 4. The R script includes the "external cross validation" part. 
-![Step 4](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Documents/Figure1_flowchart_step4_github.jpeg "Step 4")
+![Step 4](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Figure1_flowchart_step4_github.jpeg "Step 4")
 
 
 Support and communication
