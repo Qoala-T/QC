@@ -7,7 +7,7 @@ Qoala-T is developed in the [Brain and development research center](https://www.
 ![logo](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg&s=200)
 
 
-<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg" width="100" height="100">
+<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg" width="50%" height="50%">
 
 About
 -----
