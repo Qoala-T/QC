@@ -1,4 +1,4 @@
-# Qoala-T (Under construction)<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg" width="5%" height="5%">
+<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg" width="15%" height="15%"> # Qoala-T (Under construction)
 ### *A supervised-learning tool to assess accuracy of manual quality control of automatic segmented MRI data*
 
 Version (1)   21 feb 2018 <br />
