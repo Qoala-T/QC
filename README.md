@@ -1,7 +1,7 @@
 # Qoala-T (Under construction)
 ### *A supervised-learning tool to assess accuracy of manual quality control of automatic segmented MRI data*
 
-Version (1)   14 feb 2018 <br />
+Version (1)   21 feb 2018 <br />
 Qoala-T is developed in the [Brain and development research center](https://www.brainanddevelopmentlab.nl) by [Lara Wierenga](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/273-lara-wierenga) and [Eduard Klapwijk](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/287-eduard-klapwijk)
 
 
@@ -29,13 +29,13 @@ A flowchart of this process can be observed in step 4. The R script includes the
 
 Support and communication
 -------------------------
-If you have any question or suggestion dont hesitate to get in touch:
+If you have any question or suggestion don't hesitate to get in touch:
 <l.m.wierenga@fsw.leidenuniv.nl> or <e.t.klapwijk@fsw.leidenuniv.nl>
 
 
 Citation
 --------
-**When using Qoala-T, please include the following citation:**
+**When using Qoala-T please include the following citation:**
 
 Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (in prep). *Qoala-T: A supervised-learning tool to assess accuracy of manual quality control of automated neuroanatomical labeling in developmental MRI data.*
 
