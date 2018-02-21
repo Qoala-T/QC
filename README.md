@@ -23,6 +23,9 @@ A flowchart of this process can be observed in steps 2B and 2C.
 ### Predicting scan Qoala-T score by using Braintime model
 - Open [Qoala_T_step4_validation_novel_data_github.R](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_step4_validation_novel_data_github.R) and follow the instructions.
 - With this R script Qoala-T scores for a dataset are estimated using a supervised learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assesement is descibed in the supplemental meterial of Klapwijk et al ., (in prep). <br /> <br />
+- Below is an example output file showing the Qoala-T score of each scan, the number of included and excluded predictions. The grey area represents the scans that are recommended for manual quality assesment.
+![Example output file](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Figure_Rating_model_based_simulated_data_step4.pdf "Example output")
+
 A flowchart of this process can be observed in step 4. The R script includes the "external cross validation" part. 
 ![Step 4](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Figure1_flowchart_step4_github.jpeg "Step 4")
 
