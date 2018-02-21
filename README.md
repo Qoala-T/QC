@@ -1,13 +1,9 @@
-# Qoala-T (Under construction)<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg" width="25%" height="25%">
+# Qoala-T (Under construction)<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg" width="5%" height="5%">
 ### *A supervised-learning tool to assess accuracy of manual quality control of automatic segmented MRI data*
 
 Version (1)   21 feb 2018 <br />
 Qoala-T is developed in the [Brain and development research center](https://www.brainanddevelopmentlab.nl) by [Lara Wierenga](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/273-lara-wierenga) and [Eduard Klapwijk](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/287-eduard-klapwijk)
 <br />
-![logo](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg&s=200)
-
-
-<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg" width="25%" height="25%">
 
 About
 -----
