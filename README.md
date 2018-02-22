@@ -1,5 +1,5 @@
 <p align="center"> 
-<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy.jpg" width="25%" height="25%"> 
+<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy%202.jpg" width="25%" height="25%"> 
 </p> 
 
 # Qoala-T (Under construction)
