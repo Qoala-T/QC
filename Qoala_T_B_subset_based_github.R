@@ -55,7 +55,7 @@ dataset_name <- "your_dataset_name"
 # download.file("https://github.com/larawierenga/Qoala-T-under-construction/blob/master/simulated_data_B_subset.Rdata?raw=true","simulated_data_B_subset") # include path to your datafile 
 # load("simulated_data_B_subset")
 # 
-# dataset <- simulated_data_step2B
+# dataset <- simulated_data_B_subset
 # -----------------------------------------------------------------
 
 # -----------------------------------------------------------------
