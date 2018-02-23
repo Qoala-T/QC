@@ -26,9 +26,9 @@ This package contains data and R code as described in Klapwijk et al., (in prep)
 - An example output file showing the Qoala-T score of each scan is displayed below. This figure shows the number of included and excluded predictions. The grey area represents the scans that are recommended for manual quality assesment. <br /> <br /> 
 
 <p align="center"> 
-<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Qoala_T_table_simulated_data.png" width="25%" height="25%"> 
+<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Qoala_T_table_simulated_data.png" width="25%" height="50%"> 
 
-<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Figure_Rating_model_based_simulated%20data.jpg" width="25%" height="25%"> 
+<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Figure_Rating_model_based_simulated%20data.jpg" width="25%" height="50%"> 
 
 </p>
 
