@@ -27,7 +27,7 @@ This package contains data and R code for the steps 2 and 4 as described in Klap
 ![Example output file](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Figure_Rating_model_based_simulated_data_step4%20copy.jpg "Example output") <br /> 
 
 A flowchart of this process can be observed in step 4. The R script includes the "external cross validation" part.  <br /> 
-![Step 4](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Figure1_flowchart_step4_github.jpeg "Step 4")
+![FlowChart](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Flowchart_github.jpeg "FlowChart")
 
 ### B. Predicting scan Qoala-T score by rating 10% of your data
 - Open [Qoala_T_step2_10perc_github.R](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_B_subset_based_github.R) and follow the instructions.
