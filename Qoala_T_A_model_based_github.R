@@ -105,7 +105,7 @@ font_size <- 12
 text_col <- "Black"
 
 p <- ggplot(Qoala_T_predictions, aes(x=Scan_QoalaT,y=1,col=Recommendation)) +  
-  annotate("rect", xmin=40, xmax=60, ymin=1.12, ymax=.88, alpha=0.2, fill="#777777") +
+  annotate("rect", xmin=30, xmax=70, ymin=1.12, ymax=.88, alpha=0.2, fill="#777777") +
   geom_jitter(alpha=.8,height=.1,size=6) +
   ggtitle(paste("Qoala-T estimation model based ",dataset_name,"\nMean Qoala-T Score = ",round(mean(Qoala_T_predictions$Scan_QoalaT),1),sep="")) + 
   annotate("text", x=20, y=1.15, label=paste("Excluded = ",as.character(round(excl_rate[1]))," scans",sep="")) + 
