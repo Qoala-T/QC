@@ -88,7 +88,7 @@ colnames(Qoala_T_predictions) = c('VisitID','Scan_QoalaT', 'Recommendation', 'ma
 Qoala_T_predictions$VisitID <- row.names(rf.probs)
 Qoala_T_predictions$Scan_QoalaT <- rf.probs$Include*100 
 Qoala_T_predictions$Recommendation <- rf.pred
-Qoala_T_predictions$manual_QC_adviced <- ifelse(Qoala_T_predictions$Scan_QoalaT<60&Qoala_T_predictions$Scan_QoalaT>40,1,0)
+Qoala_T_predictions$manual_QC_adviced <- ifelse(Qoala_T_predictions$Scan_QoalaT<70&Qoala_T_predictions$Scan_QoalaT>30,1,0)
 Qoala_T_predictions <- Qoala_T_predictions[order(Qoala_T_predictions$Scan_QoalaT, Qoala_T_predictions$VisitID),]
 
 
