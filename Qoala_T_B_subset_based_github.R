@@ -119,9 +119,9 @@ colnames(Qoala_T_predictions_subset_based) = c('VisitID','Scan_QoalaT', 'Recomme
 
 # fill data frame
   Qoala_T_predictions_subset_based$VisitID <- row.names(rf.probs)
-  Qoala_T_predictions_subset_based$Scan_QoalaT <- rf.probs$Include*100 
+  Qoala_T_predictions_subset_based$Scan_QoalaT <- round(rf.probs$Include*100,0)
   Qoala_T_predictions_subset_based$Recommendation <- rf.pred
-  Qoala_T_predictions_subset_based$manual_QC_adviced <- ifelse(Qoala_T_predictions_subset_based$Scan_QoalaT<70&Qoala_T_predictions_subset_based$Scan_QoalaT>30,1,0)
+  Qoala_T_predictions_subset_based$manual_QC_adviced <- ifelse(Qoala_T_predictions_subset_based$Scan_QoalaT<70&Qoala_T_predictions_subset_based$Scan_QoalaT>30,"yes","no")
   Qoala_T_predictions_subset_based <- Qoala_T_predictions_subset_based[order(Qoala_T_predictions_subset_based$Scan_QoalaT, Qoala_T_predictions_subset_based$VisitID),]
   
   
