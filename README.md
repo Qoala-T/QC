@@ -16,7 +16,7 @@ Qoala-T is a supervised learning tool that asseses accuracy of manual quality co
 This package contains data and R code as described in Klapwijk et al., (in prep). The protocol of our in hosue developped manual QC procedure can be found [here](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Github_Qoala-T_Manual_QC.pdf).  
 
 ### Running Qoala-T
-- To be able to run Qoala-T T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
+- To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
 - Next run [stats2table_bash_qoala_t.sh](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/stats2table_bash_qoala_t.sh) to create an input file for the Qoala-T tool. 
 
 
