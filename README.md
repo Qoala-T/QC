@@ -12,7 +12,7 @@ Qoala-T is developed in the [Brain and development research center](https://www.
 
 About
 -----
-Qoala-T is a supervised learning tool that asseses accuracy of manual quality controled T1 imaging scans and their automated neuroanatomical labeling processed in FreeSurfer. It is particularly intended to use in developmental datasets. 
+Qoala-T is a supervised learning tool that asseses accuracy of manual quality control of T1 imaging scans and their automated neuroanatomical labeling processed in FreeSurfer. It is particularly intended to use in developmental datasets. 
 This package contains data and R code as described in Klapwijk et al., (in prep). The protocol of our in hosue developped manual QC procedure can be found [here](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Github_Qoala-T_Manual_QC.pdf).  
 
 ### Running Qoala-T
@@ -22,7 +22,7 @@ This package contains data and R code as described in Klapwijk et al., (in prep)
 
 ### A. Predicting scan Qoala-T score by using Braintime model
 - Open [Qoala_T_step4_validation_novel_data_github.R](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_A_model_based_github.R) and follow the instructions.
-- With this R script Qoala-T scores for a dataset are estimated using a supervised learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assesement is descibed in the Qoala-T manual [Qoala_T_manual](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_Manual.pdf).
+- With this R script Qoala-T scores for a dataset are estimated using a supervised- learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assessment is described in the Qoala-T manual [Manual quality control procedure for structural T1 scans](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_Manual.pdf), also available in the supplemental material of Klapwijk et al., (in prep).
 - An example output table (left) and output graph (right) showing the Qoala-T score of each scan are displayed below. The figure shows the number of included and excluded predictions. The grey area represents the scans that are recommended for manual quality assesment. <br /> <br /> 
 
 <p align="center"> 
@@ -34,7 +34,7 @@ This package contains data and R code as described in Klapwijk et al., (in prep)
 
 ### B. Predicting scan Qoala-T score by rating 10% of your data
 - Open [Qoala_T_step2_10perc_github.R](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_B_subset_based_github.R) and follow the instructions.
-- With this R script an inhouse developped manual QC protocol can be applied on a subset of the dataset (e.g. 10%, the larger the set, the more reliable the results).  <br /> <br />
+- With this R script an in-house developed manual QC protocol can be applied on a subset of the dataset (e.g. 10%, the larger the set, the more reliable the results).  <br /> <br />
 A flowchart of these processes can be observed in A and B below. <br /> 
 ![FlowChart](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/Flowchart_github.jpg "FlowChart")
 
