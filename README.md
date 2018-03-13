@@ -17,7 +17,7 @@ This package contains data and R code as described in Klapwijk et al., (in prep)
 
 ### Running Qoala-T
 - To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
-- Next run [stats2table_bash_qoala_t.sh](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/stats2table_bash_qoala_t.sh). To create an input file for the Qoala-T tool merge these files into one (see [example in R](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_merge_example_script.R). 
+- Next run [stats2table_bash_qoala_t.sh](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/stats2table_bash_qoala_t.sh). To create an input file for the Qoala-T tool merge these files into one (see [example R script](https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_merge_example_script.R)). 
 
 
 
