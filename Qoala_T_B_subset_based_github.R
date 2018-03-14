@@ -37,10 +37,14 @@ ifelse(dir.exists(outputFolder),FALSE,dir.create(outputFolder))
 # -----------------------------------------------------------------
 # Load your dataset
 # -----------------------------------------------------------------
-#Instruction: Make sure your data format look like simulated_data_B_model.Rdata (code to read simulated_data_B_model below)
+#Instruction: Make sure your data format look like simulated_data_A_model.Rdata (code to read simulated_data_A_model below)
+# Make sure your data format looks like simulated_data_B_model.Rdata (code to read simulated_data_B_model below):
+# First column should contain outcome manual quality control --> "Rating".
+# 10% of data is rated, with two factor levels ('Include' and 'Exclude').
+# Other 90% of data has no rating ('NA')
+#
 # row.names = MRI_ID !!! important step to match change the row.names 
 # col.names = colnames(simulated_data_B_subset.RData)
-# first column = Rating with two factor levels 'Include' and 'Exclude', here we simulated that 10% of data is rated, and for 90% of data there is no rating, indicated by NA's
 
 setwd(inputFolder)
 load("yourdatafile.RData")
@@ -70,7 +74,7 @@ rf.tune <- get(load("Qoala_T_model"))
 # -----------------------------------------------------------------
 dataset_names <- c("Rating",names(rf.tune$trainingData)[-ncol(rf.tune$trainingData)])
 dataset <- dataset[,dataset_names]
-dataset <- dataset[complete.cases(dataset),]
+dataset <- dataset[complete.cases(dataset[-1]),]
 
 
 # -----------------------------------------------------------------
