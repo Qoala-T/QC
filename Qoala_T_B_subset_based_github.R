@@ -37,10 +37,10 @@ ifelse(dir.exists(outputFolder),FALSE,dir.create(outputFolder))
 # -----------------------------------------------------------------
 # Load your dataset
 # -----------------------------------------------------------------
-#Instruction: Make sure your data format look like simulated_data_A_model.Rdata (code to read simulated_data_A_model below)
+#Instruction: Make sure your data format look like simulated_data_B_model.Rdata (code to read simulated_data_B_model below)
 # row.names = MRI_ID !!! important step to match change the row.names 
 # col.names = colnames(simulated_data_B_subset.RData)
-# column one = Rating with two factor levels 'Include' and 'Exclude', here we simulated that 10% of data is rated, and for 90% of data there is no rating, indicated by NA's
+# first column = Rating with two factor levels 'Include' and 'Exclude', here we simulated that 10% of data is rated, and for 90% of data there is no rating, indicated by NA's
 
 setwd(inputFolder)
 load("yourdatafile.RData")
