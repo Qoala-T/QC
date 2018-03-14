@@ -37,7 +37,7 @@ ifelse(dir.exists(outputFolder),FALSE,dir.create(outputFolder))
 # -----------------------------------------------------------------
 # Load your dataset
 # -----------------------------------------------------------------
-#Instruction: Make sure your data format look like simulated_data_A_model.Rdata (code to read simulated_data_A_model below)
+# Instruction: Make sure your data format look like simulated_data_A_model.Rdata (code to read simulated_data_A_model below)
 # Make sure your data format looks like simulated_data_B_model.Rdata (code to read simulated_data_B_model below):
 # First column should contain outcome manual quality control --> "Rating".
 # 10% of data is rated, with two factor levels ('Include' and 'Exclude').
@@ -70,7 +70,7 @@ download.file("https://github.com/larawierenga/Qoala-T-under-construction/blob/m
 rf.tune <- get(load("Qoala_T_model"))
 
 # -----------------------------------------------------------------
-#reorder colnames of dataset to match traningset
+# reorder colnames of dataset to match traningset
 # -----------------------------------------------------------------
 dataset_names <- c("Rating",names(rf.tune$trainingData)[-ncol(rf.tune$trainingData)])
 dataset <- dataset[,dataset_names]
@@ -89,7 +89,7 @@ testing = dataset[is.na(dataset$Rating),]
 testing$Rating = as.factor(testing$Rating)
 
 # -----------------------------------------------------------------
-## Setting up computational nuances of the train function for internal cross validation 
+# Setting up computational nuances of the train function for internal cross validation 
 # -----------------------------------------------------------------
 ctrl = trainControl(method = 'repeatedcv',  
                     number = 2,    
@@ -112,7 +112,7 @@ rf.tune = train(y=training$Rating,
                   verbose=FALSE)
 
 # -----------------------------------------------------------------
-## External cross validation on 90% of unseen data (1 repetition)
+# External cross validation on 90% of unseen data (1 repetition)
 # -----------------------------------------------------------------
 rf.pred <- predict(rf.tune,subset(testing, select=-c(Rating)))
 rf.probs <- predict(rf.tune,subset(testing, select=-c(Rating)),type="prob") 
