@@ -23,28 +23,28 @@
 # Input directory to your data files inclduing: aseg_stats.txt, aparc_area_lh.txt, aparc_area_rh.txt, aparc_thickness_lh.txt, aparc_thickness_rh.txt
 inputFolder <- "~/Desktop/input_datafiles/"
 setwd(inputFolder)
-test_data <- data.frame(read.table("aseg_stats.txt",sep="\t",header=TRUE))
-row.names(test_data) <- test_data[,1]
-test_data <- test_data[,-1]
+yourdatafile <- data.frame(read.table("aseg_stats.txt",sep="\t",header=TRUE))
+row.names(yourdatafile) <- yourdatafile[,1]
+yourdatafile <- yourdatafile[,-1]
 
 for (j in c("aparc_area_lh.txt","aparc_area_rh.txt","aparc_thickness_lh.txt","aparc_thickness_rh.txt")) {
   data = data.frame(read.table(paste(j,sep=""),sep="\t",header=TRUE))
   row.names(data) <- data[,1]
   data <- data[,-1]
-  test_data <- merge(test_data,data,by="row.names",all.x=T)
-  row.names(test_data) <- test_data[,1]
-  test_data <- test_data[,-1]
+  yourdatafile <- merge(yourdatafile,data,by="row.names",all.x=T)
+  row.names(yourdatafile) <- yourdatafile[,1]
+  yourdatafile <- yourdatafile[,-1]
 }
 
-save(test_data.Rdata)
+save(yourdatafile.Rdata)
 
 # -----------------------------------------------------------------
 # Add rating for Qoala_T_B_subset_based_github.R
 # -----------------------------------------------------------------
 # column one = Rating with two factor levels 'Include' and 'Exclude', here we simulated that 10% of data is rated, and for 90% of data there is no rating, indicated by NA's
 # Make sure to create a text file named rating.txt that includes a column named MRI_ID and Rating
-rating_testdata <- data.frame(read.table("rating.txt",sep="\t",header=TRUE))
-dataset <- merge(rating_testdata,test_data,by.x="MRI_ID",by.y="row.names",all.y=T)
+rating_yourdatafile <- data.frame(read.table("rating.txt",sep="\t",header=TRUE))
+dataset <- merge(rating_yourdatafile,yourdatafile,by.x="MRI_ID",by.y="row.names",all.y=T)
 row.names(dataset) <- dataset[,1]
 dataset <- dataset[,-1]
 
