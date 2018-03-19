@@ -36,7 +36,7 @@ for (j in c("aparc_area_lh.txt","aparc_area_rh.txt","aparc_thickness_lh.txt","ap
   yourdatafile <- yourdatafile[,-1]
 }
 
-save(yourdatafile,yourdatafile.Rdata)
+save(yourdatafile,file=yourdatafile.Rdata)
 
 # -----------------------------------------------------------------
 # Add rating for Qoala_T_B_subset_based_github.R
