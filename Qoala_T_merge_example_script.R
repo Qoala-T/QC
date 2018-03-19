@@ -36,6 +36,8 @@ for (j in c("aparc_area_lh.txt","aparc_area_rh.txt","aparc_thickness_lh.txt","ap
   test_data <- test_data[,-1]
 }
 
+save(test_data.Rdata)
+
 # -----------------------------------------------------------------
 # Add rating for Qoala_T_B_subset_based_github.R
 # -----------------------------------------------------------------
