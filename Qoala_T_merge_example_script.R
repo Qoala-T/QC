@@ -39,7 +39,7 @@ for (j in c("aparc_area_lh.txt","aparc_area_rh.txt","aparc_thickness_lh.txt","ap
 save(yourdatafile,file=yourdatafile.Rdata)
 
 # -----------------------------------------------------------------
-# Add rating for Qoala_T_B_subset_based_github.R
+# Add rating for Qoala_T_B_subset_based_github.R (not necessary using when only using model based script A) 
 # -----------------------------------------------------------------
 # column one = Rating with two factor levels 'Include' and 'Exclude', here we simulated that 10% of data is rated, and for 90% of data there is no rating, indicated by NA's
 # Make sure to create a text file named rating.txt that includes a column named MRI_ID and Rating
