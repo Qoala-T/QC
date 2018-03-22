@@ -13,7 +13,7 @@ Qoala-T is developed in the [Brain and development research center](https://www.
 About
 -----
 Qoala-T is a supervised learning tool that asseses accuracy of manual quality control of T1 imaging scans and their automated neuroanatomical labeling processed in FreeSurfer. It is particularly intended to use in developmental datasets. 
-This package contains data and R code as described in Klapwijk et al., (in prep). The protocol of our in house developped manual QC procedure can be found [here](https://github.com/larawierenga/Qoala-T/blob/master/Github_Qoala-T_Manual_QC.pdf).  
+This package contains data and R code as described in Klapwijk et al., (in prep). The protocol of our in house developped manual QC procedure can be found [here](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual_QC.pdf).  
 
 ### Running Qoala-T
 - To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
@@ -23,7 +23,7 @@ This package contains data and R code as described in Klapwijk et al., (in prep)
 
 ### A. Predicting scan Qoala-T score by using Braintime model
 - Open [Qoala_T_A_model_based_github.R](https://github.com/larawierenga/Qoala-T/blob/master/Qoala_T_A_model_based_github.R) and follow the instructions.
-- With this R script Qoala-T scores for a dataset are estimated using a supervised- learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assessment is described in the Qoala-T manual [Manual quality control procedure for structural T1 scans](https://github.com/larawierenga/Qoala-T/blob/master/Github_Qoala-T_Manual_QC.pdf), also available in the supplemental material of Klapwijk et al., (in prep).
+- With this R script Qoala-T scores for a dataset are estimated using a supervised- learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assessment is described in the Qoala-T manual [Manual quality control procedure for structural T1 scans](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual_QC.pdf), also available in the supplemental material of Klapwijk et al., (in prep).
 - An example output table (left) and output graph (right) showing the Qoala-T score of each scan are displayed below. The figure shows the number of included and excluded predictions. The grey area represents the scans that are recommended for manual quality assesment. <br /> <br /> 
 
 <p align="center"> 
