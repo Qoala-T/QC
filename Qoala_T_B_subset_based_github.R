@@ -8,7 +8,8 @@
 # title: Qoala-T: A supervised-learning tool for quality control of automatic segmented MRI data
 #author:
 #  - name:   Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M.
-# 
+# http://doi.org/10.1101/278358
+#
 #  If you have any question or suggestion, dont hesitate to get in touch:
 #  l.m.wierenga@fsw.leidenuniv.nl
    
