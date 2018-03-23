@@ -1,5 +1,5 @@
 <p align="center"> 
-<img src="https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Figures/KoalaFramework-Logo%20copy%202.jpg" width="25%" height="25%"> 
+<img src="https://github.com/Qoala-T/QC/blob/master/Figures/KoalaFramework-Logo%20copy%202.jpg" width="25%" height="25%"> 
 </p> 
 
 # Qoala-T
@@ -17,7 +17,7 @@ This package contains data and R code as described in Klapwijk et al., (n.d.) se
 
 ### Running Qoala-T
 - To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
-- Next run [stats2table_bash_qoala_t.sh](https://github.com/larawierenga/Qoala-T/blob/master/stats2table_bash_qoala_t.sh), an adapted version from [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table). To create an input file for the Qoala-T tool merge these files into one (see [example R script](https://github.com/larawierenga/Qoala-T/blob/master/Qoala_T_merge_example_script.R)). 
+- Next run [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/stats2table_bash_qoala_t.sh), an adapted version from [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table). To create an input file for the Qoala-T tool merge these files into one (see [example R script](https://github.com/Qoala-T/QC/blob/master/Qoala_T_merge_example_script.R)). 
 
 
 
