@@ -29,7 +29,7 @@ This package contains data and R code as described in Klapwijk et al., (n.d.) se
 <p align="center"> 
 <img src="https://github.com/Qoala-T/QC/blob/master/Figures/Qoala_T_table_simulated_data2.png" width="40%" height="50%"> 
 
-<img src="https://github.com/lQoala-T/QC/blob/master/Figures/Figure_Rating_model_based_simulated%20data.jpg" width="45%" height="50%"> 
+<img src="https://github.com/Qoala-T/QC/blob/master/Figures/Figure_Rating_model_based_simulated%20data.jpg" width="45%" height="50%"> 
 
 </p>
 
