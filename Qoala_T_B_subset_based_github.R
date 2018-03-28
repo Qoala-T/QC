@@ -58,10 +58,8 @@ dataset_name <- "your_dataset_name"
 # This is an example file
 # dataset_name <- "simulated_data" # edit to your dataset name
 # # 
-# download.file("https://github.com/larawierenga/Qoala-T-under-construction/blob/master/simulated_data_B_subset.Rdata?raw=true","simulated_data_B_subset") # include path to your datafile 
-# load("simulated_data_B_subset")
-# # 
-# dataset <- simulated_data_B_subset
+# githubURL <- "https://github.com/larawierenga/Qoala-T-under-construction/blob/master/simulated_data_B_subset.Rdata?raw=true"
+# dataset <- get(load(url(githubURL)))
 # # -----------------------------------------------------------------
 
 # -----------------------------------------------------------------
