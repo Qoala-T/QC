@@ -58,14 +58,14 @@ dataset_name <- "your_dataset_name"
 # This is an example file
 # dataset_name <- "simulated_data" # edit to your dataset name
 # # 
-# githubURL <- "https://github.com/larawierenga/Qoala-T-under-construction/blob/master/simulated_data_B_subset.Rdata?raw=true"
+# githubURL <- "https://github.com/Qoala-T/QC/blob/master/simulated_data_B_subset.Rdata?raw=true"
 # dataset <- get(load(url(githubURL)))
 # # -----------------------------------------------------------------
 
 # -----------------------------------------------------------------
 # Next match col.names to Qoala_T_model
 # -----------------------------------------------------------------
-githubURL <- "https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_model.Rdata?raw=true"
+githubURL <- "https://github.com/Qoala-T/QC/blob/master/Qoala_T_model.Rdata?raw=true"
 rf.tune <- get(load(url(githubURL)))
 
 # -----------------------------------------------------------------
