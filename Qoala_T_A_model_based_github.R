@@ -50,15 +50,13 @@ dataset_name <- "your_dataset_name"
 # Or Load example with simulated data
 # -----------------------------------------------------------------
 # This is an example file
-# download.file("https://github.com/larawierenga/Qoala-T-under-construction/blob/master/simulated_data_A_model.Rdata?raw=true","simulated_data_A_model") 
-# dataset_name <- "simulated_data_A_model" 
-# load("simulated_data_A_model") 
-# test_data <- get(dataset_name) 
+# githubURL <- "https://github.com/Qoala-T/QC/blob/master/simulated_data_A_model.Rdata?raw=true","Qoala_T_model"
+# test_data <- get(load(url(githubURL)))
 
 # -----------------------------------------------------------------
 # Load model Qoala-T model based on BrainTime data 
 # -----------------------------------------------------------------
-githubURL <- "https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_model.Rdata?raw=true","Qoala_T_model"
+githubURL <- "https://github.com/Qoala-T/QC/blob/master/Qoala_T_model.Rdata?raw=true"
 rf.tune <- get(load(url(githubURL)))
 
 # -----------------------------------------------------------------
