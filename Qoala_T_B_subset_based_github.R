@@ -67,8 +67,8 @@ dataset_name <- "your_dataset_name"
 # -----------------------------------------------------------------
 # Next match col.names to Qoala_T_model
 # -----------------------------------------------------------------
-download.file("https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_model.Rdata?raw=true","Qoala_T_model")
-rf.tune <- get(load("Qoala_T_model"))
+githubURL <- "https://github.com/larawierenga/Qoala-T-under-construction/blob/master/Qoala_T_model.Rdata?raw=true"
+rf.tune <- get(load(url(githubURL)))
 
 # -----------------------------------------------------------------
 # reorder colnames of dataset to match traningset
