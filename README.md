@@ -33,7 +33,7 @@ This package contains data and R code as described in Klapwijk et al., (n.d.) se
 
 </p>
 
-### B. Predicting scan Qoala-T score by rating 10% of your data
+### B. Predicting scan Qoala-T score by rating a subset of your data
 - Open [Qoala_T_B_subset_based_github.R](https://github.com/Qoala-T/QC/blob/master/Qoala_T_B_subset_based_github.R) and follow the instructions.
 - With this R script an in-house developed manual QC protocol can be applied on a subset of the dataset (e.g. 10%, the larger the set, the more reliable the results).  <br /> <br />
 A flowchart of these processes can be observed in A and B below. <br /> 
