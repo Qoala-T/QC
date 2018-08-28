@@ -13,7 +13,9 @@ Qoala-T is developed in the [Brain and development research center](https://www.
 About
 -----
 Qoala-T is a supervised learning tool that asseses accuracy of manual quality control of T1 imaging scans and their automated neuroanatomical labeling processed in FreeSurfer. It is particularly intended to use in developmental datasets. 
-This package contains data and R code as described in Klapwijk et al., (n.d.) see [http://doi.org/10.1101/278358](http://doi.org/10.1101/278358). The protocol of our in house developped manual QC procedure can be found [here](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual_QC.pdf).  
+This package contains data and R code as described in Klapwijk et al., (n.d.) see [http://doi.org/10.1101/278358](http://doi.org/10.1101/278358). The protocol of our in house developped manual QC procedure can be found [here](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual_QC.pdf).
+
+We have also developed an app using R Shiny by which the Qoala-T model can be run without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/) and [Qoala-T app mirror](https://qoala-t.shinyapps.io/qoala-t_app2/).
 
 ### Running Qoala-T
 - To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
