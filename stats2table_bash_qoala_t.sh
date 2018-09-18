@@ -19,10 +19,7 @@ export SUBJECTS_DIR=/path/to/file
 cd $SUBJECTS_DIR
 list="`ls -d */`"
 asegstats2table --subjects $list --meas volume --skip --tablefile aseg_stats.txt
-aparcstats2table --subjects $list --hemi lh --meas volume --skip --tablefile aparc_volume_lh.txt
 aparcstats2table --subjects $list --hemi lh --meas thickness --skip --tablefile aparc_thickness_lh.txt
 aparcstats2table --subjects $list --hemi lh --meas area --skip --tablefile aparc_area_lh.txt
-aparcstats2table --subjects $list --hemi rh --meas volume --skip --tablefile aparc_volume_rh.txt
 aparcstats2table --subjects $list --hemi rh --meas thickness --skip --tablefile aparc_thickness_rh.txt
 aparcstats2table --subjects $list --hemi rh --meas area --skip --tablefile aparc_area_rh.txt
-
