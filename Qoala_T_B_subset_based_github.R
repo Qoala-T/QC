@@ -1,11 +1,11 @@
-## Qoala-T: Estimations of MRI Qoala-T using 10% of data
+## Qoala-T: Estimations of MRI Qoala-T using subset of data
 
 # Code to reproduce step 4 (B) of our Qoala-T Tool
 # Copyright (C) 2017 Lara Wierenga - Leiden University, Brain and Development Research Center
 
 # This package contains data and R code for step 4(B) as part of our Qoala-T tool:
 #   
-# title: Qoala-T: A supervised-learning tool for quality control of automatic segmented MRI data
+# title: Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data
 #author:
 #  - name:   Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M.
 # http://doi.org/10.1101/278358
@@ -38,11 +38,10 @@ ifelse(dir.exists(outputFolder),FALSE,dir.create(outputFolder))
 # -----------------------------------------------------------------
 # Load your dataset
 # -----------------------------------------------------------------
-# Instruction: Make sure your data format look like simulated_data_A_model.Rdata (code to read simulated_data_A_model below)
-# Make sure your data format looks like simulated_data_B_model.Rdata (code to read simulated_data_B_model below):
+# Instruction: Make sure your data format looks like simulated_data_B_model.Rdata (code to read simulated_data_B_model below):
 # First column should contain outcome manual quality control --> "Rating".
-# 10% of data is rated, with two factor levels ('Include' and 'Exclude').
-# Other 90% of data has no rating ('NA')
+# Subset of data is rated, with two factor levels ('Include' and 'Exclude').
+# Remaining data has no rating ('NA')
 #
 # row.names = MRI_ID !!! important step to match change the row.names 
 # col.names = colnames(simulated_data_B_subset.RData)
@@ -79,11 +78,11 @@ dataset <- dataset[complete.cases(dataset[-1]),]
 # -----------------------------------------------------------------
 # Split into training and testing datasets 
 # -----------------------------------------------------------------
-# select training data for 10% rated data
+# select rated data as training data
 training = dataset[!is.na(dataset$Rating),]
 training$Rating = as.factor(training$Rating) 
 
-# select testing data for 90% of data that is not rated yet 
+# select remaining unrated data as testing data
 testing = dataset[is.na(dataset$Rating),]
 testing$Rating = as.factor(testing$Rating)
 
@@ -111,7 +110,7 @@ rf.tune = train(y=training$Rating,
                   verbose=FALSE)
 
 # -----------------------------------------------------------------
-# External cross validation on 90% of unseen data (1 repetition)
+# External cross validation on unrated data (1 repetition)
 # -----------------------------------------------------------------
 rf.pred <- predict(rf.tune,subset(testing, select=-c(Rating)))
 rf.probs <- predict(rf.tune,subset(testing, select=-c(Rating)),type="prob") 
@@ -145,9 +144,9 @@ colnames(Qoala_T_predictions_subset_based) = c('VisitID','Scan_QoalaT', 'Recomme
   text_col <- "Black"
   
   p <- ggplot(Qoala_T_predictions_subset_based, aes(x=Scan_QoalaT,y=1,col=Recommendation)) +  
-    annotate("rect", xmin=40, xmax=60, ymin=1.12, ymax=.88, alpha=0.2, fill="#777777") +
+    annotate("rect", xmin=30, xmax=70, ymin=1.12, ymax=.88, alpha=0.2, fill="#777777") +
     geom_jitter(alpha=.8,height=.1,size=6) +
-    ggtitle(paste("Qoala-T estimation using 10% of ",dataset_name,"\nMean Qoala-T Score = ",round(mean(Qoala_T_predictions_subset_based$Scan_QoalaT),1),sep="")) + 
+    ggtitle(paste("Qoala-T estimation using subset of ",dataset_name,"\nMean Qoala-T Score = ",round(mean(Qoala_T_predictions_subset_based$Scan_QoalaT),1),sep="")) + 
     annotate("text", x=20, y=1.15, label=paste("Excluded = ",as.character(round(excl_rate[1]))," scans",sep="")) + 
     annotate("text", x=80, y=1.15, label=paste("Included = ",as.character(round(excl_rate[2]))," scans",sep="")) + 
     
