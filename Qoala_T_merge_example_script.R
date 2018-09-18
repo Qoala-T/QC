@@ -1,8 +1,6 @@
-## Qoala-T: Estimations of MRI Qoala-T using 10% of data
+# Code to reproduce merging Freesurfer output files for Qoala-T Tool
 
-# Code to reproduce merge freesrufer output files for Qoala-T Tool
-
-# title: Qoala-T: A supervised-learning tool for quality control of automatic segmented MRI data
+# title: Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data
 #author:
 #  - name:   Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M.
 # http://doi.org/10.1101/278358
@@ -19,9 +17,9 @@
 # col.names = colnames(simulated_data_A_model.RData)
 
 # -----------------------------------------------------------------
-# Construct your dataset for Qoala_T_A_model_based_github.R
+# Construct your dataset for model-based and subset-based Qoala-T options
 # -----------------------------------------------------------------
-# Input directory to your data files inclduing: aseg_stats.txt, aparc_area_lh.txt, aparc_area_rh.txt, aparc_thickness_lh.txt, aparc_thickness_rh.txt
+# Input directory to your data files including: aseg_stats.txt, aparc_area_lh.txt, aparc_area_rh.txt, aparc_thickness_lh.txt, aparc_thickness_rh.txt
 inputFolder <- "~/Desktop/input_datafiles/"
 setwd(inputFolder)
 yourdatafile <- data.frame(read.table("aseg_stats.txt",sep="\t",header=TRUE))
@@ -40,12 +38,12 @@ for (j in c("aparc_area_lh.txt","aparc_area_rh.txt","aparc_thickness_lh.txt","ap
 save(yourdatafile,file=yourdatafile.Rdata)
 
 # -----------------------------------------------------------------
-# Add rating for Qoala_T_B_subset_based_github.R (not necessary using when only using model based script A) 
+# Add rating for subset-based Qoala-T option (Qoala_T_B_subset_based_github.R; not necessary using when only using model-based Qoala-T option A) 
 # -----------------------------------------------------------------
 # column one = Rating with two factor levels 'Include' and 'Exclude', here we simulated that 10% of data is rated, and for 90% of data there is no rating, indicated by NA's
 # Make sure to create a text file named rating.txt that includes a column named MRI_ID and Rating
+
 rating_yourdatafile <- data.frame(read.table("rating.txt",sep="\t",header=TRUE))
 dataset <- merge(rating_yourdatafile,yourdatafile,by.x="MRI_ID",by.y="row.names",all.y=T)
 row.names(dataset) <- dataset[,1]
 dataset <- dataset[,-1]
-
