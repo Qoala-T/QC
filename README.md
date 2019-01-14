@@ -6,14 +6,14 @@
   
 ### *A supervised-learning tool for quality control of FreeSurfer segmented MRI data*
 
-Version 1.1   updated September 18 2018 <br />
+Version 1.2   updated January 14 2019 <br />
 Qoala-T is developed in the [Brain and development research center](https://www.brainanddevelopmentlab.nl) by [Lara Wierenga, PhD](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/273-lara-wierenga) and [Eduard Klapwijk, PhD](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/287-eduard-klapwijk)
 <br />
 
 About
 -----
 Qoala-T is a supervised learning tool that asseses accuracy of manual quality control of T1 imaging scans and their automated neuroanatomical labeling processed in FreeSurfer. It is particularly intended to use in developmental datasets. 
-This package contains data and R code as described in Klapwijk et al., (n.d.) see [http://doi.org/10.1101/278358](http://doi.org/10.1101/278358). The protocol of our in house developped manual QC procedure can be found [here](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual_QC.pdf).
+This package contains data and R code as described in Klapwijk et al., (2019) see [https://doi.org/10.1016/j.neuroimage.2019.01.014](https://doi.org/10.1016/j.neuroimage.2019.01.014). The protocol of our in house developped manual QC procedure can be found [here](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual.pdf).
 
 We have also developed an app using R Shiny by which the Qoala-T model can be run without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/) and [Qoala-T app mirror](https://qoala-t.shinyapps.io/qoala-t_app2/).
 
@@ -26,7 +26,7 @@ You can also use the following script to extract only the output files necessary
 
 
 ### A. Predicting scan Qoala-T score by using Braintime model
-- With this R script Qoala-T scores for a dataset are estimated using a supervised- learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assessment is described in the Qoala-T manual [Manual quality control procedure for structural T1 scans](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual_QC.pdf), also available in the supplemental material of Klapwijk et al., (n.d.).
+- With this R script Qoala-T scores for a dataset are estimated using a supervised- learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assessment is described in the Qoala-T manual [Manual quality control procedure for structural T1 scans](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual.pdf), also available in the supplemental material of Klapwijk et al., (2019).
 - To run the model-based Qoala-T option open [Qoala_T_A_model_based_github.R](https://github.com/Qoala-T/QC/blob/master/Qoala_T_A_model_based_github.R) and follow the instructions. Alternatively you can run this option without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/) and [Qoala-T app mirror](https://qoala-t.shinyapps.io/qoala-t_app2/).
 - An example output table (left) and output graph (right) showing the Qoala-T score of each scan are displayed below. The figure shows the number of included and excluded predictions. The grey area represents the scans that are recommended for manual quality assesment. <br /> <br /> 
 
@@ -53,7 +53,7 @@ Citation
 --------
 **When using Qoala-T please include the following citation:**
 
-Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (n.d.). *Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data.* http://doi.org/10.1101/278358
+Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (2019). Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data. *NeuroImage* https://doi.org/10.1016/j.neuroimage.2019.01.014
 
 
 Authors
