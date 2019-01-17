@@ -27,7 +27,7 @@ You can also use the following script to extract only the output files necessary
 
 ### A. Predicting scan Qoala-T score by using Braintime model
 - With this R script Qoala-T scores for a dataset are estimated using a supervised- learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assessment is described in the Qoala-T manual [Manual quality control procedure for structural T1 scans](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual.pdf), also available in the supplemental material of Klapwijk et al., (2019).
-- To run the model-based Qoala-T option open [Qoala_T_A_model_based_github.R](https://github.com/Qoala-T/QC/blob/master/Qoala_T_A_model_based_github.R) and follow the instructions. Alternatively you can run this option without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/) and [Qoala-T app mirror](https://qoala-t.shinyapps.io/qoala-t_app2/).
+- To run the model-based Qoala-T option open [Qoala_T_A_model_based_github.R](https://github.com/Qoala-T/QC/blob/master/Qoala_T_A_model_based_github.R) and follow the instructions. Alternatively you can run this option without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/).
 - An example output table (left) and output graph (right) showing the Qoala-T score of each scan are displayed below. The figure shows the number of included and excluded predictions. The grey area represents the scans that are recommended for manual quality assesment. <br /> <br /> 
 
 <p align="center"> 
