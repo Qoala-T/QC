@@ -31,7 +31,8 @@ for (j in c("aparc_area_lh.txt","aparc_area_rh.txt","aparc_thickness_lh.txt","ap
   row.names(data) <- data[,1]
   data <- data[,-1]
   yourdatafile <- merge(yourdatafile,data,by="row.names",all.x=T)
-  yourdatafile <- yourdatafile[, -grep("\\.y$|\\.x$", colnames(yourdatafile))]
+  ifelse(grep("\\.y$", colnames(yourdatafile)),(yourdatafile <- yourdatafile[, -grep("\\.y$", colnames(yourdatafile))]) , yourdatafile)
+  names(yourdatafile) <- gsub("\\.x$", "", names(yourdatafile))
   row.names(yourdatafile) <- yourdatafile[,1]
   yourdatafile <- yourdatafile[,-1]
   }
