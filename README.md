@@ -45,8 +45,7 @@ A flowchart of these processes can be observed in A and B below. <br />
 
 Support and communication
 -------------------------
-If you have any question or suggestion don't hesitate to get in touch:
-<l.m.wierenga@fsw.leidenuniv.nl> or <e.t.klapwijk@fsw.leidenuniv.nl>
+If you have any question or suggestion don't hesitate to get in touch. Please leave a message at the [Issues page](https://github.com/Qoala-T/QC/issues).
 
 
 Citation
