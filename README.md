@@ -46,6 +46,7 @@ A flowchart of these processes can be observed in A and B below. <br />
 Predictive accuracies in new datasets
 -------------------------
 In order to continuously evaluate the performance of the Qoala-T tool, we will report predictive accuracies for different datasets on this page. We invite researchers who performed both manual QC and used Qoala-T to share their performance metrics and some basic information about their sample. This can be done by creating a pull request for this Github page or by e-mailing to [e.t.klapwijk@fsw.leidenuniv.nl](mailto:e.t.klapwijk@fsw.leidenuniv.nl).
+The table below reports predictive accuracies in new datasets when using the BrainTime model (i.e., option A that can be run using the Shiny app).
 
 <table class="tg">
   <tr>
