@@ -43,6 +43,89 @@ You can also use the following script to extract only the output files necessary
 A flowchart of these processes can be observed in A and B below. <br /> 
 ![FlowChart](https://github.com/Qoala-T/QC/blob/master/Figures/Flowchart_github.jpg "FlowChart")
 
+Predictive accuracies in new datasets
+-------------------------
+In order to continuously evaluate the performance of the Qoala-T tool, we will report predictive accuracies for different datasets on this page. We invite researchers who performed both manual QC and used Qoala-T to share their performance metrics and some basic information about their sample. This can be done by creating a pull request for this Github page or by e-mailing to [e.t.klapwijk@fsw.leidenuniv.nl](mailto:e.t.klapwijk@fsw.leidenuniv.nl).
+
+<table class="tg">
+  <tr>
+    <th class="tg-ejl1" colspan="9"><sub>General information</sub></th>
+    <th class="tg-ejl1" colspan="7"><sub>Qoala-T predictions</sub></th>
+  </tr>
+  <tr>
+    <th class="tg-aodl"><sub>Sample name or lab name</sub></th>
+    <th class="tg-aodl"><sub>Institute</sub></th>
+    <th class="tg-aodl"><sub>Author name(s)</sub></th>
+    <th class="tg-aodl"><sub>Group characteristics (e.g., developmental, patient group, elderly)</sub></th>
+    <th class="tg-aodl"><sub>Total N</sub></th>
+    <th class="tg-aodl"><sub>Age range (years)</sub></th>
+    <th class="tg-aodl"><sub>Field strength</sub></th>
+    <th class="tg-aodl"><sub>T1  sequence type (e.g., MPRAGE, T13D), field of view, dimensions of voxels</sub></th>
+    <th class="tg-aodl"><sub>doi</sub></th>
+    <th class="tg-aodl"><sub>Qoala-T version used (current = v1.2)</sub></th>
+    <th class="tg-aodl"><sub>AUC</sub></th>
+    <th class="tg-aodl"><sub>Accuracy</sub></th>
+    <th class="tg-aodl"><sub>Specificity</sub></th>
+    <th class="tg-aodl"><sub>Sensitivity</sub></th>
+    <th class="tg-aodl"><sub>Manual QC protocol used (e.g., Qoala-T protocol, in-house)</sub></th>
+    <th class="tg-aodl"><sub>Manual QC distribution (i.e., N per quality category)</sub></th>
+  </tr>
+  <tr>
+    <td class="tg-7p3h"><sub>BESD</sub></td>
+    <td class="tg-7p3h"><sub>Leiden University</sub></td>
+    <td class="tg-7p3h"><sub>Moji Aghajani, Eduard Klapwijk et al.</sub></td>
+    <td class="tg-7p3h"><sub>Adolescents with conduct disorder, autism spectrum disorder, and typically developing</sub></td>
+    <td class="tg-7p3h"><sub>112</sub></td>
+    <td class="tg-7p3h"><sub>15-19</sub></td>
+    <td class="tg-7p3h"><sub>3T</sub></td>
+    <td class="tg-7p3h"><sub>T1 3D, FOV 224x177x168, voxel size 0.875 x 0.875 x 1.2 mm</sub></td>
+    <td class="tg-7p3h"><sub>https://doi.org/10.1111/jcpp.12498; https://doi.org/10.1016/j.biopsych.2016.05.017</sub></td>
+    <td class="tg-7p3h"><sub>v1.2</sub></td>
+    <td class="tg-7p3h"><sub></sub></td>
+    <td class="tg-7p3h"><sub>0.893</sub></td>
+    <td class="tg-7p3h"><sub>0.978</sub></td>
+    <td class="tg-7p3h"><sub>0.524</sub></td>
+    <td class="tg-7p3h"><sub>Qoala-T protocol</sub></td>
+    <td class="tg-7p3h"><sub>excellent=19, good=51, doubtful=21, failed=21</sub></td>
+  </tr>
+  <tr>
+    <td class="tg-7p3h"><sub>ABIDE (subset)</sub></td>
+    <td class="tg-7p3h"><sub>NITRC</sub></td>
+    <td class="tg-7p3h"><sub>Di Martino et al.</sub></td>
+    <td class="tg-7p3h"><sub>autism spectrum disorders, typically developing controls</sub></td>
+    <td class="tg-7p3h"><sub>760</sub></td>
+    <td class="tg-7p3h"><sub>6-39</sub></td>
+    <td class="tg-7p3h"><sub>3T</sub></td>
+    <td class="tg-7p3h"><sub>site-specific, see http://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html</sub></td>
+    <td class="tg-7p3h"><sub>https://doi.org/10.1038/mp.2013.78</sub></td>
+    <td class="tg-7p3h"><sub>v1.2</sub></td>
+    <td class="tg-7p3h"><sub></sub></td>
+    <td class="tg-7p3h"><sub>0.809</sub></td>
+    <td class="tg-7p3h"><sub>0.815</sub></td>
+    <td class="tg-7p3h"><sub>0.783</sub></td>
+    <td class="tg-7p3h"><sub>from MRIQC project: T1 images were rated aided by FreeSurfer surface reconstructions</sub></td>
+    <td class="tg-7p3h"><sub>good/accept=608, doubtful=14, failed/exclude=138</sub></td>
+  </tr>
+  <tr>
+    <td class="tg-7p3h"><sub>MCN Basel</sub></td>
+    <td class="tg-7p3h"><sub>University of Basel</sub></td>
+    <td class="tg-7p3h"><sub>David Coynel</sub></td>
+    <td class="tg-7p3h"><sub>healthy young adults</sub></td>
+    <td class="tg-7p3h"><sub>1773</sub></td>
+    <td class="tg-7p3h"><sub>18-35</sub></td>
+    <td class="tg-7p3h"><sub>3T</sub></td>
+    <td class="tg-7p3h"><sub>MPRAGE, 256x256x176, 1mm3</sub></td>
+    <td class="tg-7p3h"><sub>http://dx.doi.org/10.1523/ENEURO.0222-17.2018</sub></td>
+    <td class="tg-7p3h"><sub>v1.1</sub></td>
+    <td class="tg-7p3h"><sub></sub></td>
+    <td class="tg-7p3h"><sub>0.963</sub></td>
+    <td class="tg-7p3h"><sub>0.985</sub></td>
+    <td class="tg-7p3h"><sub>0.524</sub></td>
+    <td class="tg-7p3h"><sub>in-house visual inspection of raw data</sub></td>
+    <td class="tg-7p3h"><sub>good/excellent: N=1691; doubtful/bad: N=82</sub></td>
+  </tr>
+</table>
+
 Support and communication
 -------------------------
 If you have any question or suggestion don't hesitate to get in touch. Please leave a message at the [Issues page](https://github.com/Qoala-T/QC/issues).
@@ -52,7 +135,7 @@ Citation
 --------
 **When using Qoala-T please include the following citation:**
 
-Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (2019). Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data. *NeuroImage* https://doi.org/10.1016/j.neuroimage.2019.01.014
+Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (2019). Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data. *NeuroImage, 189*, 116-129. https://doi.org/10.1016/j.neuroimage.2019.01.014
 
 
 Authors
