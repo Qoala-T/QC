@@ -123,82 +123,6 @@ The table below reports predictive accuracies in new datasets when using the Bra
   </tr>
 </table>
 
-<table class="tg">
-  <tr>
-    <th class="tg-ejl1" colspan="6"><sub>Qoala-T predictions</sub></th>
-    <th class="tg-ejl1" colspan="9"><sub>General information</sub></th>
-  </tr>
-  <tr>
-    <th class="tg-aodl"><sub>Qoala-T version used (current = v1.2)</sub></th>
-    <th class="tg-aodl"><sub>Accuracy</sub></th>
-    <th class="tg-aodl"><sub>Specificity</sub></th>
-    <th class="tg-aodl"><sub>Sensitivity</sub></th>
-    <th class="tg-aodl"><sub>Manual QC protocol used (e.g., Qoala-T protocol, in-house)</sub></th>
-    <th class="tg-aodl"><sub>Manual QC distribution (i.e., N per quality category)</sub></th>
-    <th class="tg-aodl"><sub>Sample name or lab name</sub></th>
-    <th class="tg-aodl"><sub>Institute</sub></th>
-    <th class="tg-aodl"><sub>Author name(s)</sub></th>
-    <th class="tg-aodl"><sub>Group characteristics (e.g., developmental, patient group, elderly)</sub></th>
-    <th class="tg-aodl"><sub>Total N</sub></th>
-    <th class="tg-aodl"><sub>Age range (years)</sub></th>
-    <th class="tg-aodl"><sub>Field strength</sub></th>
-    <th class="tg-aodl"><sub>T1  sequence type (e.g., MPRAGE, T13D), field of view, dimensions of voxels</sub></th>
-    <th class="tg-aodl"><sub>doi</sub></th>
-  </tr>
-  <tr>
-    <td class="tg-7p3h"><sub>v1.2</sub></td>
-    <td class="tg-7p3h"><sub>0.893</sub></td>
-    <td class="tg-7p3h"><sub>0.978</sub></td>
-    <td class="tg-7p3h"><sub>0.524</sub></td>
-    <td class="tg-7p3h"><sub>Qoala-T protocol</sub></td>
-    <td class="tg-7p3h"><sub>excellent=19, good=51, doubtful=21, failed=21</sub></td>
-    <td class="tg-7p3h"><sub>BESD</sub></td>
-    <td class="tg-7p3h"><sub>Leiden University</sub></td>
-    <td class="tg-7p3h"><sub>Moji Aghajani, Eduard Klapwijk et al.</sub></td>
-    <td class="tg-7p3h"><sub>Adolescents with conduct disorder, autism spectrum disorder, and typically developing</sub></td>
-    <td class="tg-7p3h"><sub>112</sub></td>
-    <td class="tg-7p3h"><sub>15-19</sub></td>
-    <td class="tg-7p3h"><sub>3T</sub></td>
-    <td class="tg-7p3h"><sub>T1 3D, FOV 224x177x168, voxel size 0.875 x 0.875 x 1.2 mm</sub></td>
-    <td class="tg-7p3h"><sub>https://doi.org/10.1111/jcpp.12498; https://doi.org/10.1016/j.biopsych.2016.05.017</sub></td>
-  </tr>
-  <tr>
-    <td class="tg-7p3h"><sub>v1.2</sub></td>
-    <td class="tg-7p3h"><sub>0.809</sub></td>
-    <td class="tg-7p3h"><sub>0.815</sub></td>
-    <td class="tg-7p3h"><sub>0.783</sub></td>
-    <td class="tg-7p3h"><sub>from MRIQC project: T1 images were rated aided by FreeSurfer surface reconstructions</sub></td>
-    <td class="tg-7p3h"><sub>good/accept=608, doubtful=14, failed/exclude=138</sub></td>    
-    <td class="tg-7p3h"><sub>ABIDE (subset)</sub></td>
-    <td class="tg-7p3h"><sub>NITRC</sub></td>
-    <td class="tg-7p3h"><sub>Di Martino et al.</sub></td>
-    <td class="tg-7p3h"><sub>autism spectrum disorders, typically developing controls</sub></td>
-    <td class="tg-7p3h"><sub>760</sub></td>
-    <td class="tg-7p3h"><sub>6-39</sub></td>
-    <td class="tg-7p3h"><sub>3T</sub></td>
-    <td class="tg-7p3h"><sub>site-specific, see http://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html</sub></td>
-    <td class="tg-7p3h"><sub>https://doi.org/10.1038/mp.2013.78</sub></td>
-  </tr>
-  <tr>
-    <td class="tg-7p3h"><sub>v1.1</sub></td>
-    <td class="tg-7p3h"><sub>0.963</sub></td>
-    <td class="tg-7p3h"><sub>0.985</sub></td>
-    <td class="tg-7p3h"><sub>0.524</sub></td>
-    <td class="tg-7p3h"><sub>in-house visual inspection of raw data</sub></td>
-    <td class="tg-7p3h"><sub>good/excellent: N=1691; doubtful/bad: N=82</sub></td>
-    <td class="tg-7p3h"><sub>MCN Basel</sub></td>
-    <td class="tg-7p3h"><sub>University of Basel</sub></td>
-    <td class="tg-7p3h"><sub>David Coynel</sub></td>
-    <td class="tg-7p3h"><sub>healthy young adults</sub></td>
-    <td class="tg-7p3h"><sub>1773</sub></td>
-    <td class="tg-7p3h"><sub>18-35</sub></td>
-    <td class="tg-7p3h"><sub>3T</sub></td>
-    <td class="tg-7p3h"><sub>MPRAGE, 256x256x176, 1mm3</sub></td>
-    <td class="tg-7p3h"><sub>http://dx.doi.org/10.1523/ENEURO.0222-17.2018</sub></td>   
-  </tr>
-</table>
-
-
 Support and communication
 -------------------------
 If you have any question or suggestion don't hesitate to get in touch. Please leave a message at the [Issues page](https://github.com/Qoala-T/QC/issues).
@@ -217,9 +141,7 @@ Eduard T. Klapwijk, Ferdi van de Kamp, Mara van der Meulen, Sabine Peters, and L
 
 <br />
 <br />
-Copyright (C) 2017 Lara Wierenga - Leiden University, Brain and Development Research Center<br />
+Copyright (C) 2017-2019 Lara Wierenga - Leiden University, Brain and Development Research Center<br />
 All rights reserved
 
 ----
-
-
