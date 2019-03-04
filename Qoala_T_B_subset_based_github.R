@@ -1,18 +1,18 @@
 ## Qoala-T: Estimations of MRI Qoala-T using subset of data
 
-# Code to reproduce step 4 (B) of our Qoala-T Tool
-# Copyright (C) 2017 Lara Wierenga - Leiden University, Brain and Development Research Center
+# Code to reproduce step 2 of our Qoala-T Tool
+# Copyright (C) 2017-2019 Lara Wierenga - Leiden University, Brain and Development Research Center
 
-# This package contains data and R code for step 4(B) as part of our Qoala-T tool:
+# This package contains data and R code for use of the Qoala-T tool based on a subset of your own data:
 #   
 # title: Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data
 #author:
 #  - name:   Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M.
-# http://doi.org/10.1101/278358
+# https://doi.org/10.1016/j.neuroimage.2019.01.014
 #
 #  If you have any question or suggestion, dont hesitate to get in touch:
-#  l.m.wierenga@fsw.leidenuniv.nl
-   
+# https://github.com/Qoala-T/QC/issues
+
 ## ============================
 # dependencies: the following packages are used in this code
 packages <- c("caret", "corrplot", "gbm", "plyr", "randomForest", "e1071",
@@ -164,8 +164,6 @@ colnames(Qoala_T_predictions_subset_based) = c('VisitID','Scan_QoalaT', 'Recomme
     )
   print(p) 
   
-  
   filename<- paste(outputFolder,"Figure_Rating_",dataset_name,".pdf",sep="")
   dev.copy(pdf,filename,width=30/2.54, height=20/2.54)
   dev.off()
-  
