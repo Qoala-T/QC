@@ -23,3 +23,14 @@ aparcstats2table --subjects $list --hemi lh --meas thickness --skip --tablefile 
 aparcstats2table --subjects $list --hemi lh --meas area --skip --tablefile aparc_area_lh.txt
 aparcstats2table --subjects $list --hemi rh --meas thickness --skip --tablefile aparc_thickness_rh.txt
 aparcstats2table --subjects $list --hemi rh --meas area --skip --tablefile aparc_area_rh.txt
+
+
+#### NOTE: Since stats2table is a python2 script, one might run into errors when using it under python3. ####
+
+# One solution maybe to change line 1 to #!/usr/bin/env python2
+# Or by changing lines 21-25 to:
+# python2 $FREESURFER_HOME/bin/asegstats2table
+
+# For more information on this issue see the FreeSurfer mailing list:
+# https://www.mail-archive.com/freesurfer@nmr.mgh.harvard.edu/msg56465.html
+# https://mail.nmr.mgh.harvard.edu/pipermail//freesurfer/2018-August/058208.html
