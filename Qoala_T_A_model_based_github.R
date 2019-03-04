@@ -1,17 +1,17 @@
 ## Qoala-T: Estimations of MRI Qoala-T using BrainTime model
 
-# Code to reproduce step 4 (A) of our Qoala-T Tool
-# Copyright (C) 2017 Lara Wierenga - Leiden University, Brain and Development Research Center
+# Code to reproduce step 4 of our Qoala-T Tool
+# Copyright (C) 2017-2019 Lara Wierenga - Leiden University, Brain and Development Research Center
 # 
-# This package contains data and R code for step 4 (A) as part of our Qoala-T tool:
+# This package contains data and R code for use of the Qoala-T tool based on the BrainTime model:
 #   
-#   title: Qoala-T: A supervised-learning tool for quality control of automatic segmented MRI data
+#   title: Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data
 # author:
 #  - name:   Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M.
-# http://doi.org/10.1101/278358
+# https://doi.org/10.1016/j.neuroimage.2019.01.014
 #
 # If you have any question or suggestion, dont hesitate to get in touch:
-# l.m.wierenga@fsw.leidenuniv.nl
+# https://github.com/Qoala-T/QC/issues
 
 ## ============================
 # dependencies: the following packages are used in this code
@@ -121,16 +121,6 @@ p <- ggplot(Qoala_T_predictions, aes(x=Scan_QoalaT,y=1,col=Recommendation)) +
   )
 print(p) 
 
-
 filename<- paste(outputFolder,"Figure_Rating_model_based_",dataset_name,".pdf",sep="")
 dev.copy(pdf,filename,width=30/2.54, height=20/2.54)
 dev.off()
-
-
-
-
-
-
-
-
-
