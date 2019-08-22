@@ -5,7 +5,10 @@
 # Qoala-T
   
 ### *A supervised-learning tool for quality control of FreeSurfer segmented MRI data*
-
+ 
+ [![Version](https://img.shields.io/badge/version-1.2-blue)](https://github.com/Qoala-T/QC)
+ [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Qoala-T/QC/blob/master/LICENSE)
+ 
 Version 1.2   updated January 14 2019 <br />
 Qoala-T is developed in the [Brain and development research center](https://www.brainanddevelopmentlab.nl) by [Lara Wierenga, PhD](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/273-lara-wierenga) and [Eduard Klapwijk, PhD](https://www.brainanddevelopmentlab.nl/index.php/people/post-docs/181-post-doctoral-researchers/287-eduard-klapwijk)
 <br />
@@ -139,9 +142,4 @@ Authors
 -------
 Eduard T. Klapwijk, Ferdi van de Kamp, Mara van der Meulen, Sabine Peters, and Lara M. Wierenga
 
-<br />
-<br />
-Copyright (C) 2017-2019 Lara Wierenga - Leiden University, Brain and Development Research Center<br />
-All rights reserved
-
-----
+-------
