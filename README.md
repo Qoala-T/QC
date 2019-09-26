@@ -10,7 +10,7 @@
  [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Qoala-T/QC/blob/master/LICENSE)
  
 Version 1.2   updated January 14 2019 <br />
-Qoala-T is developed and created by [Lara Wierenga, PhD](https://brainanddevelopment.nl/people/lara-wierenga/) and advanced by [Eduard Klapwijk, PhD](https://brainanddevelopment.nl/people/eduard-klapwijk/) in the [Brain and development research center](https://www.brainanddevelopment.nl).
+Qoala-T is developed and created by [Lara Wierenga, PhD](https://brainanddevelopment.nl/people/lara-wierenga/) and modified by [Eduard Klapwijk, PhD](https://brainanddevelopment.nl/people/eduard-klapwijk/) in the [Brain and development research center](https://www.brainanddevelopment.nl).
 <br />
 
 About
