@@ -2,8 +2,9 @@
 # Written by Olga Veth - s2067579
 # Version 3.0
 
-datasetDir <- "/path/to/subjects/directory/"
-setwd(datasetDir)
+inputFolder <- "/path/to/subjects/directory/"
+outputFolder <- "/path/to/subjects/directory/"
+setwd(inputFolder)
 
 readAseg <- function(){
   aseg_file <- data.frame(read.table(paste("./stats/aseg.stats", sep=""), row.names=1))[,c(3,4)] 
@@ -81,7 +82,7 @@ main <- function(){
   first <- T
   subjectDirs <- unique(list.dirs('.', recursive=FALSE)) # Get all sample subject
   for (x in 0:length(subjectDirs)){
-    setwd(paste(datasetDir, subjectDirs[x], sep=""))
+    setwd(paste(inputFolder, subjectDirs[x], sep=""))
     statsDirs <- list.dirs('.', recursive=FALSE)
     if (file.exists("./stats/aseg.stats")){
       subjectTable <- readFiles()
@@ -101,7 +102,7 @@ main <- function(){
   
   stats2Table <- data.frame(stats2Table)
   rownames(stats2Table) <- subjects
-  setwd(datasetDir)
+  setwd(outputFolder)
   write.csv(stats2Table, "Simulated_data_A_Model.csv")
 }
 main()
