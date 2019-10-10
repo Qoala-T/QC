@@ -76,8 +76,6 @@ preprocTable <- function(subjectTable){
   return(subjectTable)
 }
 
-
-## Still add col fill!!!!!!!!!!
 main <- function(){
   subjects <- c()
   first <- T
@@ -103,11 +101,7 @@ main <- function(){
   
   stats2Table <- data.frame(stats2Table)
   rownames(stats2Table) <- subjects
-  #print(rownames(stats2Table))
   setwd(datasetDir)
-  write.csv(stats2Table, "Simulated_data_A_Model_OV_Version_SamenUniek_F6.csv")
-  save(stats2Table, file="Simulated_data_A_Model_OV_Version_SamenUniek_F6.RData")
+  write.csv(stats2Table, "Simulated_data_A_Model.csv")
 }
 main()
-
-fs6 <- read.csv("Simulated_data_A_Model_OV_Version_SamenUniek_F6.csv")
