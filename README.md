@@ -23,6 +23,8 @@ We have also developed an app using R Shiny by which the Qoala-T model can be ru
 ### Running Qoala-T
 - To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
 - Use the following script to extract the necessary information needed in order to perform Qoala-T: [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R)
+
+Stats2Table.R replaces manual extraction of necessary files and merging.
 - ~~Next extract the following output txt files  using [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table): <i> aseg_stats.txt, aparc_thickness_lh.txt, aparc_area_lh.txt, aparc_thickness_rh.txt, aparc_area_rh.txt</i>.~~ <br />
 - ~~You can also use the following script to extract only the output files necessary for Qoala-T: [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/Old/stats2table_bash_qoala_t.sh), an adapted version from [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table).~~
 - ~~To create an input file for the Qoala-T tool merge these files into one (see [example R script](https://github.com/Qoala-T/QC/blob/master/Old/Qoala_T_merge_example_script.R)).~~
