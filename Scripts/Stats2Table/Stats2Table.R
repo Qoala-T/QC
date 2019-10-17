@@ -105,7 +105,7 @@ main <- function(){
   stats2Table <- data.frame(stats2Table)
   rownames(stats2Table) <- subjects
   setwd(datasetDir)
-  write.csv(stats2Table, paste("Simulated_data_A_Model", dataset_name,".csv", sep=""))
+  write.csv(stats2Table, paste("FreeSurfer_Output_", dataset_name,".csv", sep=""))
 }
 main()
 
