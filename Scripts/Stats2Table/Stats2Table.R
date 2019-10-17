@@ -2,9 +2,9 @@
 # Written by Olga Veth - s2067579
 # Version 3.0
 
-inputFolder <- "/path/to/subjects/directory/"
-outputFolder <- "/path/to/subjects/directory/"
-setwd(inputFolder)
+datasetDir <- "/path/to/subjects/directory/"
+setwd(datasetDir)
+dataset_name <- "Dataset_Name"
 
 readAseg <- function(){
   aseg_file <- data.frame(read.table(paste("./stats/aseg.stats", sep=""), row.names=1))[,c(3,4)] 
@@ -77,12 +77,14 @@ preprocTable <- function(subjectTable){
   return(subjectTable)
 }
 
+
+## Still add col fill!!!!!!!!!!
 main <- function(){
   subjects <- c()
   first <- T
   subjectDirs <- unique(list.dirs('.', recursive=FALSE)) # Get all sample subject
   for (x in 0:length(subjectDirs)){
-    setwd(paste(inputFolder, subjectDirs[x], sep=""))
+    setwd(paste(datasetDir, subjectDirs[x], sep=""))
     statsDirs <- list.dirs('.', recursive=FALSE)
     if (file.exists("./stats/aseg.stats")){
       subjectTable <- readFiles()
@@ -102,7 +104,9 @@ main <- function(){
   
   stats2Table <- data.frame(stats2Table)
   rownames(stats2Table) <- subjects
-  setwd(outputFolder)
-  write.csv(stats2Table, "Simulated_data_A_Model.csv")
+  setwd(datasetDir)
+  write.csv(stats2Table, paste("Simulated_data_A_Model", dataset_name,".csv", sep=""))
 }
 main()
+
+
