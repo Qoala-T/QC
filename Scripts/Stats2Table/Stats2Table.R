@@ -1,18 +1,32 @@
+##################
+# STATS2TABLE.PY #
+##################
+# Written by Olga Veth - s2067579 - University of Leiden
+# MSc Computer Science
+# For: Developmental-and Educational Psychology
 # Created on 30-09-2019
-# Written by Olga Veth - s2067579
+# Most Recent update: 16-10-19
 # Version 3.0
 
-datasetDir <- "/path/to/subjects/directory/"
-setwd(datasetDir)
-dataset_name <- "Dataset_Name"
+# Two inputs should be provided by the user of this script
+#   1. Directory of all the subjects and/or samples of the study
+#   2. Name of the study and/or dataset
+datasetDir <- "/path/to/subjects/directory/" # Change Directory to your data
+setwd(datasetDir) 
+dataset_name <- "Dataset_Name" # Provide name of your study and/or dataset
+
 
 readAseg <- function(){
+  # The Aseg file of a subject is read in
+  # Volume_mm3 and StructName are selected
   aseg_file <- data.frame(read.table(paste("./stats/aseg.stats", sep=""), row.names=1))[,c(3,4)] 
   asegTable <- t(data.frame(aseg_file[,1], row.names = aseg_file[,2])) # Aseg file - regular
   return (asegTable)
 }
 
 readMetaAseg <- function(){
+  # The Aseg file of a subject is read in
+  # Its metadata containing 'lhCortex' etc. and their volume are saved
   aseg_meta <- readLines("./stats/aseg.stats", n=35)[14:35]
   meta1 <- gsub("# ", "", aseg_meta)
   meta <- t(data.frame(strsplit(meta1, ",")))[,c(2,4)]
@@ -22,10 +36,16 @@ readMetaAseg <- function(){
 }
 
 editCol <- function(side, string, add){
+  # Change measure areas from 'Areaname'--> 'lh_Areaname_area'
   return(paste(side, "_", string, add, sep=""))
 }
 
-readAparc <- function(value){ # Thickness & Area last?
+readAparc <- function(value){
+  # Aparc files of lh and rh are read in and the 
+  # area and thickness values of both files are retreved as well as 
+  # the metadata measurements of both parts
+  # Areanames are formatted and eventually the data is saved into
+  # a data frame
   sides <- c("lh", "rh")
   ifelse((value == "area"), pos <- 1, pos <- 2)
   
@@ -33,7 +53,7 @@ readAparc <- function(value){ # Thickness & Area last?
     areaThickness <- as.data.frame(read.table(paste("./stats/", sides[x], ".aparc.stats", sep=""), row.names=1))[, c(2,4)]
     rowValues <- rownames(areaThickness)
     
-    meta <- readLines(paste("./stats/", sides[x], ".aparc.stats", sep=""))[c(20, 21)] # Get thickness & area
+    meta <- readLines(paste("./stats/", sides[x], ".aparc.stats", sep=""))[c(20, 21)] 
     meta1 <- gsub("# ", "", meta)
     meta2 <- t(data.frame(strsplit(meta1, ",")))[, c(2,4)]
     meta3 <- data.frame(meta2[pos,2])
@@ -48,6 +68,8 @@ readAparc <- function(value){ # Thickness & Area last?
 }
 
 readFiles <- function(){
+  # Aseg and Aparc files are read in and all the data is merged
+  # starting with Aseg data followed with Aparc
   asegTable <- readAseg()
   metaTable <- readMetaAseg()
   
@@ -60,6 +82,7 @@ readFiles <- function(){
 }
 
 preprocTable <- function(subjectTable){
+  # Columnames are edited or removed of the table
   removeCols <- c("*.WM-hypointensities$","*.WM.hypointensities$", "*pole*", "*bankssts*", "VentricleChoroidVol", "*CerebralWhiteMatterVol", "\\bSurfaceHoles\\b",
                   "SegVolFile.mri.aseg.mgz.", "*CorticalWhiteMatterVol")
   remove <- grep(paste(removeCols, collapse="|"), colnames(subjectTable))
@@ -77,9 +100,11 @@ preprocTable <- function(subjectTable){
   return(subjectTable)
 }
 
-
-## Still add col fill!!!!!!!!!!
 main <- function(){
+  # It loops through all subjects sub-directories in the given directory
+  # With every single subject, data is retrieved and written in a row
+  # in the final table. 
+  # The result is saved into a .CSV file
   subjects <- c()
   first <- T
   subjectDirs <- unique(list.dirs('.', recursive=FALSE)) # Get all sample subject
