@@ -1,5 +1,5 @@
 ##################
-# STATS2TABLE.PY #
+# STATS2TABLE.R #
 ##################
 # Written by Olga Veth - s2067579 - University of Leiden
 # MSc Computer Science
