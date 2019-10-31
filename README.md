@@ -22,15 +22,18 @@ We have also developed an app using R Shiny by which the Qoala-T model can be ru
 
 ### Running Qoala-T
 - To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
-- Next extract the following output txt files  using [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table): <i> aseg_stats.txt, aparc_thickness_lh.txt, aparc_area_lh.txt, aparc_thickness_rh.txt, aparc_area_rh.txt</i>. <br /> 
-You can also use the following script to extract only the output files necessary for Qoala-T: [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/stats2table_bash_qoala_t.sh), an adapted version from [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table).
-- To create an input file for the Qoala-T tool merge these files into one (see [example R script](https://github.com/Qoala-T/QC/blob/master/Qoala_T_merge_example_script.R)).
+- Use the following script to extract the necessary information needed in order to perform Qoala-T: [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R)
+
+Stats2Table.R replaces manual extraction of necessary files and merging, the steps taken are shown below.
+- ~~Next extract the following output txt files  using [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table): <i> aseg_stats.txt, aparc_thickness_lh.txt, aparc_area_lh.txt, aparc_thickness_rh.txt, aparc_area_rh.txt</i>.~~ <br />
+- ~~You can also use the following script to extract only the output files necessary for Qoala-T: [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/Old/stats2table_bash_qoala_t.sh), an adapted version from [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table).~~
+- ~~To create an input file for the Qoala-T tool merge these files into one (see [example R script](https://github.com/Qoala-T/QC/blob/master/Old/Qoala_T_merge_example_script.R)).~~
 
 
 
 ### A. Predicting scan Qoala-T score by using Braintime model
 - With this R script Qoala-T scores for a dataset are estimated using a supervised- learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assessment is described in the Qoala-T manual [Manual quality control procedure for structural T1 scans](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual.pdf), also available in the supplemental material of Klapwijk et al., (2019).
-- To run the model-based Qoala-T option open [Qoala_T_A_model_based_github.R](https://github.com/Qoala-T/QC/blob/master/Qoala_T_A_model_based_github.R) and follow the instructions. Alternatively you can run this option without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/).
+- To run the model-based Qoala-T option open [Qoala_T_A_model_based_github.R](https://github.com/Qoala-T/QC/blob/master/Scripts/QualityControl/Qoala_T_A_model_based_github.R) and follow the instructions. Alternatively you can run this option without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/).
 - An example output table (left) and output graph (right) showing the Qoala-T score of each scan are displayed below. The figure shows the number of included and excluded predictions. The grey area represents the scans that are recommended for manual quality assesment. <br /> <br /> 
 
 <p align="center"> 
@@ -42,7 +45,7 @@ You can also use the following script to extract only the output files necessary
 
 ### B. Predicting scan Qoala-T score by rating a subset of your data
 - With this R script an in-house developed manual QC protocol can be applied on a subset of the dataset (e.g. 10%, the larger the set, the more reliable the results).  
-- To run the subset-based Qoala-T option open [Qoala_T_B_subset_based_github.R](https://github.com/Qoala-T/QC/blob/master/Qoala_T_B_subset_based_github.R) and follow the instructions.<br /> <br />
+- To run the subset-based Qoala-T option open [Qoala_T_B_subset_based_github.R](https://github.com/Qoala-T/QC/blob/master/Scripts/QualityControl/Qoala_T_B_subset_based_github.R) and follow the instructions.<br /> <br />
 A flowchart of these processes can be observed in A and B below. <br /> 
 ![FlowChart](https://github.com/Qoala-T/QC/blob/master/Figures/Flowchart_github.jpg "FlowChart")
 
