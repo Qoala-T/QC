@@ -9,8 +9,9 @@
 # Version 3.0
 
 # Two inputs should be provided by the user of this script
-#   1. Directory of all the subjects and/or samples of the study
+#   1. Directory containing all the directories of the study participants with FreeSurfer output
 #   2. Name of the study and/or dataset
+
 datasetDir <- "/path/to/subjects/directory/" # Change Directory to your data
 setwd(datasetDir) 
 dataset_name <- "Dataset_Name" # Provide name of your study and/or dataset
@@ -133,5 +134,3 @@ main <- function(){
   write.csv(stats2Table, paste("FreeSurfer_Output_", dataset_name,".csv", sep=""))
 }
 main()
-
-
