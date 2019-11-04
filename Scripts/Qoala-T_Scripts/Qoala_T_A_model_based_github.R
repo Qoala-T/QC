@@ -38,10 +38,10 @@ ifelse(dir.exists(outputFolder),FALSE,dir.create(outputFolder))
 # -----------------------------------------------------------------
 # Load your dataset
 # -----------------------------------------------------------------
-#Instruction: Make sure your data format look like simulated_data_A_model.Rdata (code to read simulated_data_A_model below)
-# row.names = MRI_ID !!! important step to match change the row.names 
-# col.names = colnames(simulated_data_A_model.RData)
+# set working directory and dataset name (here the output of Stats2Table is expected, 
+# see https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R
 setwd(inputFolder)
+dataset_name <- "Dataset_Name" # Provide name of your study and/or dataset (same as dataset name in Stats2Table script)
 stats2Table <- read.csv(paste("FreeSurfer_Output_", dataset_name, ".csv", sep=""), header=T, row.names=1)
 test_data <- stats2Table
 dataset_name <- "your_dataset_name"
