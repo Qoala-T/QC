@@ -13,25 +13,25 @@ Version 1.2   updated January 14 2019 <br />
 Qoala-T is developed and created by [Lara Wierenga, PhD](https://brainanddevelopment.nl/people/lara-wierenga/) and modified by [Eduard Klapwijk, PhD](https://brainanddevelopment.nl/people/eduard-klapwijk/) in the [Brain and development research center](https://www.brainanddevelopment.nl).
 <br />
 
-About
+## About
 -----
 Qoala-T is a supervised learning tool that asseses accuracy of manual quality control of T1 imaging scans and their automated neuroanatomical labeling processed in FreeSurfer. It is particularly intended to use in developmental datasets. 
 This package contains data and R code as described in Klapwijk et al., (2019) see [https://doi.org/10.1016/j.neuroimage.2019.01.014](https://doi.org/10.1016/j.neuroimage.2019.01.014). The protocol of our in house developed manual QC procedure can be found [here](https://github.com/Qoala-T/QC/blob/master/Qoala-T_ManualQC.pdf).
 
 We have also developed an app using R Shiny by which the Qoala-T model can be run without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/).
 
-### Running Qoala-T
+## Running Qoala-T
+-----
 - To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
 - Use the following script to extract the necessary information needed in order to perform Qoala-T: [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R)
 
-Note: Stats2Table.R replaces extraction of necessary txt files using the [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table) script or [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/Old/stats2table_bash_qoala_t.sh), which had to be merged using [this R script](https://github.com/Qoala-T/QC/blob/master/Old/Qoala_T_merge_example_script.R).
-
+*Note*: Stats2Table.R replaces extraction of necessary txt files using the [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table) script or [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/Old/stats2table_bash_qoala_t.sh), which had to be merged using [this R script](https://github.com/Qoala-T/QC/blob/master/Old/Qoala_T_merge_example_script.R).
 
 
 ### A. Predicting scan Qoala-T score by using Braintime model
 - With this R script Qoala-T scores for a dataset are estimated using a supervised- learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assessment is described in the Qoala-T manual [Manual quality control procedure for structural T1 scans](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual.pdf), also available in the supplemental material of Klapwijk et al., (2019).
 - To run the model-based Qoala-T option open [Qoala_T_A_model_based_github.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Qoala-T_Scripts/Qoala_T_A_model_based_github.R) and follow the instructions. Alternatively you can run this option without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/).
-- **NEW**: Using this [Qoala-T Jupyter Notebook](https://github.com/Qoala-T/QC/blob/master/Notebooks/Qoala-T_Notebook.ipynb) is  the easiest way to get from your directory with FreeSurfer-processed data to Qoala-T predictions based on the BrainTime model. Only prerequisite is you can run Jupyter Notebooks in R, for example by installing [Anaconda](https://www.anaconda.com/distribution/) and then follow [these instructions](https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang/). 
+
 - An example output table (left) and output graph (right) showing the Qoala-T score of each scan are displayed below. The figure shows the number of included and excluded predictions. The grey area represents the scans that are recommended for manual quality assesment. <br /> <br /> 
 
 <p align="center"> 
@@ -41,13 +41,20 @@ Note: Stats2Table.R replaces extraction of necessary txt files using the [fswiki
 
 </p>
 
+#### Run Qoala-T in a Jupyter notebook:
+- **NEW**: Using this [Qoala-T Jupyter Notebook](https://github.com/Qoala-T/QC/blob/master/Notebooks/Qoala-T_Notebook.ipynb) is  the easiest way to get from your directory with FreeSurfer-processed data to Qoala-T predictions based on the BrainTime model. Only prerequisite is you can run Jupyter Notebooks in R, for example by installing [Anaconda](https://www.anaconda.com/distribution/) and then follow [these instructions](https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang/). 
+
 ### B. Predicting scan Qoala-T score by rating a subset of your data
 - With this R script an in-house developed manual QC protocol can be applied on a subset of the dataset (e.g. 10%, the larger the set, the more reliable the results).  
 - To run the subset-based Qoala-T option open [Qoala_T_B_subset_based_github.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Qoala-T_Scripts/Qoala_T_B_subset_based_github.R) and follow the instructions.<br /> <br />
 A flowchart of these processes can be observed in A and B below. <br /> 
 ![FlowChart](https://github.com/Qoala-T/QC/blob/master/Figures/Flowchart_github.jpg "FlowChart")
 
-Predictive accuracies in new datasets
+### Using Qoala-T with longitudinal data
+- When using Qoala-T within the [longitudinal FreeSurfer stream](https://surfer.nmr.mgh.harvard.edu/fswiki/LongitudinalProcessing), the QC predictions should be run within the first step of the processing pipeline (Step 1. the cross-sectional processing of the timepoints). It will not work with the output from the longitudinal stream, since the longitudinal processing does not provide the number of surface holes, which is needed for prediction. 
+- When running Qoala-T right after cross-sectional processing, bad quality scans/segmentations can be removed before running step 2 where the template from all time points is created. In this way the template will not be affected by a poor quality timepoint.
+
+## Predictive accuracies in new datasets
 -------------------------
 In order to continuously evaluate the performance of the Qoala-T tool, we will report predictive accuracies for different datasets on this page. We invite researchers who performed both manual QC and used Qoala-T to share their performance metrics and some basic information about their sample. This can be done by creating a pull request for this Github page or by e-mailing to [e.t.klapwijk@fsw.leidenuniv.nl](mailto:e.t.klapwijk@fsw.leidenuniv.nl).
 The table below reports predictive accuracies in new datasets when using the BrainTime model (i.e., option A that can be run using the Shiny app).
@@ -127,19 +134,19 @@ The table below reports predictive accuracies in new datasets when using the Bra
   </tr>
 </table>
 
-Support and communication
+## Support and communication
 -------------------------
 If you have any question or suggestion don't hesitate to get in touch. Please leave a message at the [Issues page](https://github.com/Qoala-T/QC/issues).
 
 
-Citation
+## Citation
 --------
 **When using Qoala-T please include the following citation:**
 
 Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (2019). Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data. *NeuroImage, 189*, 116-129. https://doi.org/10.1016/j.neuroimage.2019.01.014
 
 
-Authors
+## Authors
 -------
 Eduard T. Klapwijk, Ferdi van de Kamp, Mara van der Meulen, Sabine Peters, and Lara M. Wierenga
 
