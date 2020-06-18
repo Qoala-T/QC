@@ -14,14 +14,14 @@ Qoala-T is developed and created by [Lara Wierenga, PhD](https://brainanddevelop
 <br />
 
 ## About
------
+
 Qoala-T is a supervised learning tool that asseses accuracy of manual quality control of T1 imaging scans and their automated neuroanatomical labeling processed in FreeSurfer. It is particularly intended to use in developmental datasets. 
 This package contains data and R code as described in Klapwijk et al., (2019) see [https://doi.org/10.1016/j.neuroimage.2019.01.014](https://doi.org/10.1016/j.neuroimage.2019.01.014). The protocol of our in house developed manual QC procedure can be found [here](https://github.com/Qoala-T/QC/blob/master/Qoala-T_ManualQC.pdf).
 
 We have also developed an app using R Shiny by which the Qoala-T model can be run without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/).
 
 ## Running Qoala-T
------
+
 - To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
 - Use the following script to extract the necessary information needed in order to perform Qoala-T: [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R)
 
@@ -55,7 +55,7 @@ A flowchart of these processes can be observed in A and B below. <br />
 - When running Qoala-T right after cross-sectional processing, bad quality scans/segmentations can be removed before running step 2 where the template from all time points is created. In this way the template will not be affected by a poor quality timepoint.
 
 ## Predictive accuracies in new datasets
--------------------------
+
 In order to continuously evaluate the performance of the Qoala-T tool, we will report predictive accuracies for different datasets on this page. We invite researchers who performed both manual QC and used Qoala-T to share their performance metrics and some basic information about their sample. This can be done by creating a pull request for this Github page or by e-mailing to [e.t.klapwijk@fsw.leidenuniv.nl](mailto:e.t.klapwijk@fsw.leidenuniv.nl).
 The table below reports predictive accuracies in new datasets when using the BrainTime model (i.e., option A that can be run using the Shiny app).
 
@@ -135,19 +135,18 @@ The table below reports predictive accuracies in new datasets when using the Bra
 </table>
 
 ## Support and communication
--------------------------
+
 If you have any question or suggestion don't hesitate to get in touch. Please leave a message at the [Issues page](https://github.com/Qoala-T/QC/issues).
 
 
 ## Citation
---------
+
 **When using Qoala-T please include the following citation:**
 
 Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (2019). Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data. *NeuroImage, 189*, 116-129. https://doi.org/10.1016/j.neuroimage.2019.01.014
 
 
 ## Authors
--------
+
 Eduard T. Klapwijk, Ferdi van de Kamp, Mara van der Meulen, Sabine Peters, and Lara M. Wierenga
 
--------
