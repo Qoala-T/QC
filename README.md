@@ -9,7 +9,7 @@
  [![Version](https://img.shields.io/badge/version-1.2-blue)](https://github.com/Qoala-T/QC)
  [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Qoala-T/QC/blob/master/LICENSE)
  
-Version 1.2   updated January 14 2019 <br />
+Version 1.2  > prediction model was updated January 14 2019; Github pages updated December 23 2020 <br />
 Qoala-T is developed and created by [Lara Wierenga, PhD](https://brainanddevelopment.nl/people/lara-wierenga/) and modified by [Eduard Klapwijk, PhD](https://brainanddevelopment.nl/people/eduard-klapwijk/) in the [Brain and development research center](https://www.brainanddevelopment.nl).
 <br />
 
@@ -49,6 +49,9 @@ We have also developed an app using R Shiny by which the Qoala-T model can be ru
 - To run the subset-based Qoala-T option open [Qoala_T_B_subset_based_github.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Qoala-T_Scripts/Qoala_T_B_subset_based_github.R) and follow the instructions.<br /> <br />
 A flowchart of these processes can be observed in A and B below. <br /> 
 ![FlowChart](https://github.com/Qoala-T/QC/blob/master/Figures/Flowchart_github.jpg "FlowChart")
+
+#### Run Qoala-T subset based in a Jupyter notebook:
+- **NEW**: Using this [Qoala-T Jupyter Notebook](https://github.com/Qoala-T/QC/blob/master/Notebooks/Qoala-T_Notebook_subset.ipynb) is  the easiest way to get from your directory with FreeSurfer-processed data to Qoala-T predictions onde you have manually rated a subset of your data. Only prerequisite is you can run Jupyter Notebooks in R, for example by installing [Anaconda](https://www.anaconda.com/distribution/) and then follow [these instructions](https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang/). 
 
 ### Using Qoala-T with longitudinal data
 - When using Qoala-T within the [longitudinal FreeSurfer stream](https://surfer.nmr.mgh.harvard.edu/fswiki/LongitudinalProcessing), the QC predictions should be run within the first step of the processing pipeline (Step 1. the cross-sectional processing of the timepoints). It will not work with the output from the longitudinal stream, since the longitudinal processing does not provide the number of surface holes, which is needed for prediction. 
