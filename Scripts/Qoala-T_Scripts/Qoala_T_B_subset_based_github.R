@@ -57,7 +57,7 @@ dataset_name <- "your_dataset_name"
 # This is an example file
 # dataset_name <- "simulated_data" # edit to your dataset name
 # # 
-# githubURL <- "https://github.com/Qoala-T/QC/blob/master/simulated_data_B_subset.Rdata?raw=true"
+# githubURL <- "https://github.com/Qoala-T/QC/blob/master/ExampleData/simulated_data_B_subset.Rdata?raw=true"
 # dataset <- get(load(url(githubURL)))
 # # -----------------------------------------------------------------
 
@@ -68,7 +68,7 @@ githubURL <- "https://github.com/Qoala-T/QC/blob/master/Qoala_T_model.Rdata?raw=
 rf.tune <- get(load(url(githubURL)))
 
 # -----------------------------------------------------------------
-# reorder colnames of dataset to match traningset
+# reorder colnames of dataset to match trainingset
 # -----------------------------------------------------------------
 dataset_names <- c("Rating",names(rf.tune$trainingData)[-ncol(rf.tune$trainingData)])
 dataset <- dataset[,dataset_names]
@@ -121,14 +121,14 @@ head(rf.probs)
 # ----------------------------------------------------------------
 # create empty data frame
 Qoala_T_predictions_subset_based <- data.frame(matrix(ncol = 4, nrow = nrow(rf.probs)))                   
-colnames(Qoala_T_predictions_subset_based) = c('VisitID','Scan_QoalaT', 'Recommendation', 'manual_QC_adviced') 
+colnames(Qoala_T_predictions_subset_based) = c('participant_id','Scan_QoalaT', 'Recommendation', 'manual_QC_adviced') 
 
 # fill data frame
-  Qoala_T_predictions_subset_based$VisitID <- row.names(rf.probs)
+  Qoala_T_predictions_subset_based$participant_id <- row.names(rf.probs)
   Qoala_T_predictions_subset_based$Scan_QoalaT <- rf.probs$Include*100 
   Qoala_T_predictions_subset_based$Recommendation <- rf.pred
   Qoala_T_predictions_subset_based$manual_QC_adviced <- ifelse(Qoala_T_predictions_subset_based$Scan_QoalaT<60&Qoala_T_predictions_subset_based$Scan_QoalaT>40,"yes","no")
-  Qoala_T_predictions_subset_based <- Qoala_T_predictions_subset_based[order(Qoala_T_predictions_subset_based$Scan_QoalaT, Qoala_T_predictions_subset_based$VisitID),]
+  Qoala_T_predictions_subset_based <- Qoala_T_predictions_subset_based[order(Qoala_T_predictions_subset_based$Scan_QoalaT, Qoala_T_predictions_subset_based$participant_id),]
   
   
   csv_Qoala_T_predictions_subset_based = paste(outputFolder,'Qoala_T_predictions_subset_based',dataset_name,'.csv', sep = '')

@@ -50,7 +50,7 @@ dataset_name <- "your_dataset_name"
 # Or Load example with simulated data
 # -----------------------------------------------------------------
 # This is an example file
-# githubURL <- "https://github.com/Qoala-T/QC/blob/master/simulated_data_A_model.Rdata?raw=true","Qoala_T_model"
+# githubURL <- "https://github.com/Qoala-T/QC/blob/master/ExampleData/simulated_data_A_model.Rdata?raw=true","Qoala_T_model"
 # test_data <- get(load(url(githubURL)))
 
 # -----------------------------------------------------------------
@@ -60,7 +60,7 @@ githubURL <- "https://github.com/Qoala-T/QC/blob/master/Qoala_T_model.Rdata?raw=
 rf.tune <- get(load(url(githubURL)))
 
 # -----------------------------------------------------------------
-#reorder colnames of dataset to match traningset
+#reorder colnames of dataset to match trainingset
 # -----------------------------------------------------------------
 dataset_colnames <- names(rf.tune$trainingData)[-ncol(rf.tune$trainingData)]
 testing <- test_data[,dataset_colnames]
@@ -78,14 +78,14 @@ head(rf.probs)
 # ----------------------------------------------------------------
 # create empty data frame
 Qoala_T_predictions <- data.frame(matrix(ncol = 4, nrow = nrow(rf.probs)))                             
-colnames(Qoala_T_predictions) = c('VisitID','Scan_QoalaT', 'Recommendation', 'manual_QC_adviced') 
+colnames(Qoala_T_predictions) = c('participant_id','Scan_QoalaT', 'Recommendation', 'manual_QC_adviced') 
 
 # fill data frame
-Qoala_T_predictions$VisitID <- row.names(rf.probs)
+Qoala_T_predictions$participant_id <- row.names(rf.probs)
 Qoala_T_predictions$Scan_QoalaT <- rf.probs$Include*100 
 Qoala_T_predictions$Recommendation <- rf.pred
 Qoala_T_predictions$manual_QC_adviced <- ifelse(Qoala_T_predictions$Scan_QoalaT<70&Qoala_T_predictions$Scan_QoalaT>30,"yes","no")
-Qoala_T_predictions <- Qoala_T_predictions[order(Qoala_T_predictions$Scan_QoalaT, Qoala_T_predictions$VisitID),]
+Qoala_T_predictions <- Qoala_T_predictions[order(Qoala_T_predictions$Scan_QoalaT, Qoala_T_predictions$participant_id),]
 
 
 csv_Qoala_T_predictions = paste(outputFolder,'Qoala_T_predictions_model_based_',dataset_name,'.csv', sep = '')
