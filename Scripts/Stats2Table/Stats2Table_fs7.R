@@ -13,12 +13,11 @@
 #   1. Directory containing all the directories of the study participants with FreeSurfer output
 #   2. Name of the study and/or dataset
 
-#datasetDir <- "/path/to/subjects/directory/" # Change Directory to your data
-datasetDir <- "/exports/fsw/Bendlab/BrainTime_Nii/" # Change Directory to your data
+datasetDir <- "/path/to/subjects/directory/" # Change Directory to your data
 
 setwd(datasetDir) 
-#dataset_name <- "Dataset_Name" # Provide name of your study and/or dataset
-dataset_name <- "Brain_Time_QOALAT_fs7_update" # Provide name of your study and/or dataset
+dataset_name <- "Dataset_Name" # Provide name of your study and/or dataset
+
 
 
 readAseg <- function(){
