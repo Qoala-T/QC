@@ -31,7 +31,7 @@ readAseg <- function(){
 readMetaAseg <- function(){
   # The Aseg file of a subject is read in
   # Its metadata containing 'lhCortex' etc. and their volume are saved
-  aseg_meta <- readLines("./stats/aseg.stats", n=35)[16:36] #Edited for fs7.0.0 from line 16 iso line 15
+  aseg_meta <- readLines("./stats/aseg.stats", n=35)[15:34] #Edited for fs7.0.0 from line 15 iso line 14
   meta1 <- gsub("# ", "", aseg_meta)
   meta <- t(data.frame(strsplit(meta1, ",")))[,c(2,4)]
   metaTable <- t(data.frame(meta[,2]))
