@@ -6,8 +6,9 @@
   
 ### *A supervised-learning tool for quality control of FreeSurfer segmented MRI data*
  
- [![Version](https://img.shields.io/badge/version-1.2-blue)](https://github.com/Qoala-T/QC)
+ [![Version](https://img.shields.io/badge/version-1.2.1-blue)](https://github.com/Qoala-T/QC/releases)
  [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Qoala-T/QC/blob/master/LICENSE)
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4575464.svg)](https://doi.org/10.5281/zenodo.4575464)
  
 Version 1.2  > prediction model was updated January 14 2019; Github pages updated December 23 2020 <br />
 Qoala-T is developed and created by [Lara Wierenga, PhD](https://brainanddevelopment.nl/people/lara-wierenga/) and modified by [Eduard Klapwijk, PhD](https://orcid.org/0000-0002-8936-0365) in the [Brain and development research center](https://www.brainanddevelopment.nl).
@@ -145,7 +146,7 @@ If you have any question or suggestion don't hesitate to get in touch. Please le
 
 **When using Qoala-T please include the following citation:**
 
-Klapwijk, E.T., van de Kamp, F., Meulen, M., Peters, S. and Wierenga, L.M. (2019). Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data. *NeuroImage, 189*, 116-129. https://doi.org/10.1016/j.neuroimage.2019.01.014
+Klapwijk, E.T., van de Kamp, F., van der Meulen, M., Peters, S. and Wierenga, L.M. (2019). Qoala-T: A supervised-learning tool for quality control of FreeSurfer segmented MRI data. *NeuroImage, 189*, 116-129. https://doi.org/10.1016/j.neuroimage.2019.01.014
 
 
 ## Authors
