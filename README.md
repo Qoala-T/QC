@@ -24,12 +24,12 @@ We have also developed an app using R Shiny by which the Qoala-T model can be ru
 ## Running Qoala-T
 
 - To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). The models used in the present version are developped for FreeSurfer V6.0. We have tested this for version FreeSrufer V7.1.1 as well, see more details below.  
-- Use the following script to extract the necessary information needed in order to perform Qoala-T: for FreeSurfer v6.0 use [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R) for FreeSurfer v7.1.1 use [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R)
+- Use the following script to extract the necessary information needed in order to perform Qoala-T: for FreeSurfer v6.0 use [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R) for FreeSurfer v7.1.1 use [Stats2Table_fs7.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table_fs7.R)
 
 *Note*: the Stats2Table.R script replaces extraction of necessary txt files using the [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table) script or [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/Old/stats2table_bash_qoala_t.sh), which had to be merged using [this R script](https://github.com/Qoala-T/QC/blob/master/Old/Qoala_T_merge_example_script.R).
 
 
-### A. Predicting scan Qoala-T score by using Braintime model
+### A. Predicting scan Qoala-T score by using Braintime model (FreeSurfer v6.0)
 - With this R script Qoala-T scores for a dataset are estimated using a supervised- learning model. This model is based on 784 T1-weighted imaging scans of subjects aged between 8 and 25 years old (53% females). The manual quality assessment is described in the Qoala-T manual [Manual quality control procedure for structural T1 scans](https://github.com/Qoala-T/QC/blob/master/Qoala-T_Manual.pdf), also available in the supplemental material of Klapwijk et al. (2019).
 - To run the model-based Qoala-T option open [Qoala_T_A_model_based_github.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Qoala-T_Scripts/Qoala_T_A_model_based_github.R) and follow the instructions. Alternatively you can run this option without having R installed, see the [Qoala-T app](https://qoala-t.shinyapps.io/qoala-t_app/) (source code [here](https://github.com/Qoala-T/QC/blob/master/Shiny/app.R)).
 
@@ -42,15 +42,15 @@ We have also developed an app using R Shiny by which the Qoala-T model can be ru
 
 </p>
 
-#### Run Qoala-T in a Jupyter notebook:
+#### Run Qoala-T in a Jupyter notebook (FreeSurfer v6.0):
 - **NEW**: Using this [Qoala-T Jupyter Notebook](https://github.com/Qoala-T/QC/blob/master/Notebooks/Qoala-T_Notebook.ipynb) is  the easiest way to get from your directory with FreeSurfer-processed data to Qoala-T predictions based on the BrainTime model. Only prerequisite is you can run Jupyter Notebooks in R, for example by installing [Anaconda](https://www.anaconda.com/distribution/) and then follow [these instructions](https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang/). 
 
-### B. Predicting scan Qoala-T score by rating a subset of your data
+### B. Predicting scan Qoala-T score by rating a subset of your data (FreeSurfer v6.0 and FreeSurfer v7.1.0)
 - With this R script an in-house developed manual QC protocol can be applied on a subset of the dataset (e.g. 10%, the larger the set, the more reliable the results).  
 - To run the subset-based Qoala-T option open [Qoala_T_B_subset_based_github.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Qoala-T_Scripts/Qoala_T_B_subset_based_github.R) and follow the instructions.<br /> <br />
 A flowchart of these processes can be observed in A and B below. <br /> 
 ![FlowChart](https://github.com/Qoala-T/QC/blob/master/Figures/Flowchart_github.jpg "FlowChart")
-#### Run Qoala-T subset based in a Jupyter notebook:
+#### Run Qoala-T subset based in a Jupyter notebook (FreeSurfer v6.0 and FreeSurfer v7.1.0):
 - **NEW**: Using this [Qoala-T Jupyter Notebook - subset-based](https://github.com/Qoala-T/QC/blob/master/Notebooks/Qoala-T_Notebook_subset.ipynb) is  the easiest way to get from your directory with FreeSurfer-processed data to Qoala-T predictions onde you have manually rated a subset of your data. Only prerequisite is you can run Jupyter Notebooks in R, for example by installing [Anaconda](https://www.anaconda.com/distribution/) and then follow [these instructions](https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang/). 
 
 ### Using Qoala-T with longitudinal data
@@ -138,6 +138,25 @@ The table below reports predictive accuracies in new datasets when using the Bra
 </table>
 
 ## Validation of Qoala-T tool in FreeSurfer version 7.1.0 
+
+We have assessed the preformance of the Qoala-T tool on the latest FreeSurfer v7.1.0 release. We have tested this using a 10 fold cross validation to see if we could replicate the results of FreeSurfer v6.0 as published in paragraph 3.3 of [Klapwijk et al., (2019)](https://doi.org/10.1016/j.neuroimage.2019.01.014). 
+
+| Fold| AUC | Accuracy |Sensitivity |Specificity |
+| ----| ------------- | ------------- |------------- |------------- |
+|1 |	0.977|	0.976|	0.806|	0.985|
+|2 |	0.989|	0.976|	0.871|	0.982|
+|3 |	0.974|	0.970|	0.750|	0.982|
+|4 |	0.970|	0.975|	0.813|	0.983|
+|5 |	0.968|	0.971|	0.710|	0.985|
+|6 |	0.980|	0.970|	0.906|	0.973|
+|7 |	0.980|	0.976|	0.935|	0.978|
+|8 |	0.971|	0.973|	0.844|	0.980|
+|9 |	0.967|	0.973|	0.813|	0.982|
+|10|	0.973|	0.973|	0.871|	0.978|
+| ------------- | ------------- | ------------- |------------- |------------- |------------- |------------- |
+|Mean |0.975 |0.973 |0.832 |0.981 |
+|SD	|0.007 |0.002	|0.069 |0.004 |
+| ------------- | ------------- | ------------- |------------- |------------- |------------- |------------- |
 
 
 
