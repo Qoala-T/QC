@@ -141,8 +141,8 @@ The table below reports predictive accuracies in new datasets when using the Bra
 
 We have assessed the preformance of the Qoala-T tool on the latest FreeSurfer v7.1.0 release. We have tested this using a 10 fold cross validation to see if we could replicate the results of FreeSurfer v6.0 as published in paragraph 3.3 of [Klapwijk et al., (2019)](https://doi.org/10.1016/j.neuroimage.2019.01.014). 
 
-| Fold| AUC | Accuracy |Sensitivity |Specificity |
-| ----| ------------- | ------------- |------------- |------------- |
+|Fold | AUC | Accuracy |Sensitivity |Specificity |
+| ---| --- | --- |--- |--- |
 |1 |	0.977|	0.976|	0.806|	0.985|
 |2 |	0.989|	0.976|	0.871|	0.982|
 |3 |	0.974|	0.970|	0.750|	0.982|
@@ -152,11 +152,9 @@ We have assessed the preformance of the Qoala-T tool on the latest FreeSurfer v7
 |7 |	0.980|	0.976|	0.935|	0.978|
 |8 |	0.971|	0.973|	0.844|	0.980|
 |9 |	0.967|	0.973|	0.813|	0.982|
-|10|	0.973|	0.973|	0.871|	0.978|
-| ------------- | ------------- | ------------- |------------- |------------- |------------- |------------- |
-|Mean |0.975 |0.973 |0.832 |0.981 |
-|SD	|0.007 |0.002	|0.069 |0.004 |
-| ------------- | ------------- | ------------- |------------- |------------- |------------- |------------- |
+|10|	0.973|	0.973|	0.871|  0.978|
+|Mean | 0.975 | 0.973 | 0.832 | 0.981|
+|SD	| 0.007 | 0.002	| 0.069 | 0.004|
 
 
 
