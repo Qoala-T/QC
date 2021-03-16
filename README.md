@@ -10,8 +10,8 @@
  [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Qoala-T/QC/blob/master/LICENSE)
  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4575464.svg)](https://doi.org/10.5281/zenodo.4575464)
  
-Version 1.2  > prediction model was updated January 14 2019; Github pages updated December 23 2020 <br />
-Qoala-T is developed and created by [Lara Wierenga, PhD](https://brainanddevelopment.nl/people/lara-wierenga/) and modified by [Eduard Klapwijk, PhD](https://orcid.org/0000-0002-8936-0365) in the [Brain and development research center](https://www.brainanddevelopment.nl).
+Version 1.2  > prediction model was updated January 14 2019; Github pages updated March 16 2021 <br />
+Qoala-T is developed and created by [Lara Wierenga, PhD](https://brainanddevelopment.nl/people/lara-wierenga/) and [Eduard Klapwijk, PhD](https://orcid.org/0000-0002-8936-0365) in the [Brain and development research center](https://www.brainanddevelopment.nl).
 <br />
 
 ## About
@@ -23,8 +23,8 @@ We have also developed an app using R Shiny by which the Qoala-T model can be ru
 
 ## Running Qoala-T
 
-- To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer V6.0](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
-- Use the following script to extract the necessary information needed in order to perform Qoala-T: [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R)
+- To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). The models used in the present version are developped for FreeSurfer V6.0. We have tested this for version FreeSrufer V7.1.1 as well, see more details below.  
+- Use the following script to extract the necessary information needed in order to perform Qoala-T: for FreeSurfer v6.0 use [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R) for FreeSurfer v7.1.1 use [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R)
 
 *Note*: the Stats2Table.R script replaces extraction of necessary txt files using the [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table) script or [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/Old/stats2table_bash_qoala_t.sh), which had to be merged using [this R script](https://github.com/Qoala-T/QC/blob/master/Old/Qoala_T_merge_example_script.R).
 
@@ -136,6 +136,10 @@ The table below reports predictive accuracies in new datasets when using the Bra
     <td class="tg-7p3h"><sub>good/excellent: N=1691; doubtful/bad: N=82</sub></td>
   </tr>
 </table>
+
+## Validation of Qoala-T tool in FreeSurfer version 7.1.0 
+
+
 
 ## Support and communication
 
