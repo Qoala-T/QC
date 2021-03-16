@@ -23,7 +23,7 @@ We have also developed an app using R Shiny by which the Qoala-T model can be ru
 
 ## Running Qoala-T
 
-- To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). The models used in the present version are developped for FreeSurfer V6.0. We have tested this for version FreeSrufer V7.1.1 as well, see more details below.  
+- To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). The models used in the present version are developped for FreeSurfer V6.0. We have tested this for version FreeSrufer V7.1.1 as well, see more details [below](## validation-of-qoala-t-tool-in-freesurfer-version-7.1.0).  
 - Use the following script to extract the necessary information needed in order to perform Qoala-T: for FreeSurfer v6.0 use [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R) for FreeSurfer v7.1.1 use [Stats2Table_fs7.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table_fs7.R)
 
 *Note*: the Stats2Table.R script replaces extraction of necessary txt files using the [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table) script or [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/Old/stats2table_bash_qoala_t.sh), which had to be merged using [this R script](https://github.com/Qoala-T/QC/blob/master/Old/Qoala_T_merge_example_script.R).
@@ -140,7 +140,7 @@ The table below reports predictive accuracies in new datasets when using the Bra
 ## Validation of Qoala-T tool in FreeSurfer version 7.1.0 
 
 We have assessed the preformance of the Qoala-T tool on the latest FreeSurfer v7.1.0 release. We have tested this using a 10 fold cross validation to see if we could replicate the results of FreeSurfer v6.0 as published in paragraph 3.3 of [Klapwijk et al., (2019)](https://doi.org/10.1016/j.neuroimage.2019.01.014). Results are highly similar, yet sensitivity is a little lower and shows larger variation, indicating that FreeSurfer vs7.1.0 gives more conservative results, as some good scans might be flagged as manual chack or poor quality. 
-Note that the random forest model paramaters were identical to the ones used in the publication of Klapwijk et al.. In addition, we used the manual quality ratings based on the v6.0 output. So potentially the accuracy of the segmentatios between the two FreeSurfer versions may differ, which we did not assess here. 
+Note that the random forest model paramaters were identical to the ones used in the publication of Klapwijk et al.. In addition, we used the manual quality ratings based on the v6.0 output. So potentially the accuracy of the segmentatios between the two FreeSurfer versions may differ, which we did not assess here. We would recommand to use the subset-based Qoala-T option for data processed in FreeSurfer v7.1.0 [Qoala_T_B_subset_based_github.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Qoala-T_Scripts/Qoala_T_B_subset_based_github.R) rather than the model based Qoala-T option (based on FreeSurfer v6.0 segmentations). 
 
 |Fold | AUC | Accuracy |Sensitivity |Specificity |
 | ---| --- | --- |--- |--- |
