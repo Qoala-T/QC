@@ -23,7 +23,7 @@ We have also developed an app using R Shiny by which the Qoala-T model can be ru
 
 ## Running Qoala-T
 
-- To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). The models used in the present version are developped for FreeSurfer V6.0. We have tested this for version FreeSrufer V7.1.1 as well, see more details [below](#validation-of-qoala-t-tool-in-freesurfer-version-7.1.0).  
+- To be able to run the Qoala-T model, T1 MRI images should be processed in [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). The models used in the present version are developped for FreeSurfer V6.0. We have tested this for version FreeSrufer V7.1.0 as well, see more details [below](#validation-of-qoala-t-tool-in-freesurfer-version-7.1.0).  
 - Use the following script to extract the necessary information needed in order to perform Qoala-T: for FreeSurfer v6.0 use [Stats2Table.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table.R) for FreeSurfer v7.1.1 use [Stats2Table_fs7.R](https://github.com/Qoala-T/QC/blob/master/Scripts/Stats2Table/Stats2Table_fs7.R)
 
 *Note*: the Stats2Table.R script replaces extraction of necessary txt files using the [fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki/freesurferstats2table) script or [stats2table_bash_qoala_t.sh](https://github.com/Qoala-T/QC/blob/master/Old/stats2table_bash_qoala_t.sh), which had to be merged using [this R script](https://github.com/Qoala-T/QC/blob/master/Old/Qoala_T_merge_example_script.R).
